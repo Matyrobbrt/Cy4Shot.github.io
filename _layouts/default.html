@@ -18,8 +18,9 @@
         {% if site.logo %}
           <a href="{{ "/" | absolute_url }}"><img src="{{site.logo | relative_url}}" alt="Logo" /></a>
         {% endif %}
-
+        {% if site.show_description %}
         <p><h3>{{ site.description }}</p></h3>
+        {% endif %}
       </header>
       <section>
       {{ content }}
