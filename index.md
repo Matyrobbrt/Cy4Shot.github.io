@@ -1,4 +1,4 @@
-# Cy4
+# Cy4's Tutorials (aka Cy4Shot)
 
 ## Who am I?
 Hi! I'm Cy4 and I make youtube tutorials on how to make minecraft mods! Here are some links:
