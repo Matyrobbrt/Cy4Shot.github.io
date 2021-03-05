@@ -1,4 +1,4 @@
-# Cy4's Tutorials (aka Cy4Shot)
+# Cy4's Tutorials
 
 ## Who am I?
 Hi! I'm Cy4 and I make youtube tutorials on how to make minecraft mods! Here are some links:
@@ -13,4 +13,4 @@ I don't finish many mods but I love to make mods for my friends! So far I only h
  - <a href="https://www.curseforge.com/minecraft/mc-mods/stone-fence-gates">Stone Fence Gates Mod</a>
 
 ## Commissions!
-I take mod commisions! I will any create a minecraft mod for you (Forge 1.16+ Only!). In order to see more details, click HERE. 
+I take mod commisions! I will any create a minecraft mod for you (Forge 1.16+ Only!). In order to see more details, click <a href="https://cy4shot.github.io/commissions">Here</a>. 
