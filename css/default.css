@@ -1824,7 +1824,7 @@ nav a {
 	display: inline-block;
 	margin: 15px 25px;
 	outline: none;
-	color: #fff;
+	color: #313233;
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -1970,7 +1970,7 @@ nav a:focus {
 	left: 0;
 	width: 100%;
 	height: 1px;
-	background: #fff;
+	background: #313233;
 	content: '';
 	opacity: 0;
 	-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
@@ -2034,7 +2034,7 @@ nav a:focus {
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background: #fff;
+	background: #313233;
 	content: '';
 	-webkit-transition: top 0.3s;
 	-moz-transition: top 0.3s;
@@ -2047,7 +2047,7 @@ nav a:focus {
 	left: 0;
 	width: 2px;
 	height: 2px;
-	background: #fff;
+	background: #313233;
 	content: '';
 	-webkit-transition: height 0.3s;
 	-moz-transition: height 0.3s;
@@ -2130,7 +2130,7 @@ nav a:focus {
 }
 
 .cl-effect-8 a::after  {
-	border-color: #fff;
+	border-color: #313233;
 	opacity: 0;
 	-webkit-transform: translateY(-7px) translateX(6px);
 	-moz-transform: translateY(-7px) translateX(6px);
@@ -2166,7 +2166,7 @@ nav a:focus {
 	left: 0;
 	width: 100%;
 	height: 1px;
-	background: #fff;
+	background: #313233;
 	content: '';
 	opacity: 0.2;
 	-webkit-transition: opacity 0.3s, height 0.3s;
@@ -2261,7 +2261,7 @@ nav a:focus {
 	padding: 10px 20px;
 	width: 100%;
 	height: 100%;
-	background: #fff;
+	background: #313233;
 	color: #0f7c67;
 	content: attr(data-hover);
 	-webkit-transition: -webkit-transform 0.3s;
@@ -2299,8 +2299,8 @@ nav a:focus {
 	overflow: hidden;
 	padding: 10px 0;
 	max-width: 0;
-	border-bottom: 2px solid #fff;
-	color: #fff;
+	border-bottom: 2px solid #313233;
+	color: #313233;
 	content: attr(data-hover);
 	-webkit-transition: max-width 0.5s;
 	-moz-transition: max-width 0.5s;
@@ -2378,8 +2378,8 @@ nav a:focus {
 
 .cl-effect-13 a:hover::before,
 .cl-effect-13 a:focus::before {
-	color: #fff;
-	text-shadow: 10px 0 #fff, -10px 0 #fff;
+	color: #313233;
+	text-shadow: 10px 0 #313233, -10px 0 #313233;
 }
 
 .cl-effect-13 a:hover,
@@ -2399,7 +2399,7 @@ nav a:focus {
 	position: absolute;
 	width: 45px;
 	height: 2px;
-	background: #fff;
+	background: #313233;
 	content: '';
 	opacity: 0.2;
 	-webkit-transition: all 0.3s;
@@ -2461,7 +2461,7 @@ nav a:focus {
 }
 
 .cl-effect-15 a::before {
-	color: #fff;
+	color: #313233;
 	content: attr(data-hover);
 	position: absolute;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
@@ -2484,7 +2484,7 @@ nav a:focus {
 }
 
 .cl-effect-16 a::before {
-	color: #fff;
+	color: #313233;
 	content: attr(data-hover);
 	position: absolute;
 	opacity: 0;
@@ -2514,7 +2514,7 @@ nav a:focus {
 }
 
 .cl-effect-17 a::before {
-	color: #fff;
+	color: #313233;
 	text-shadow: 0 0 1px rgba(255,255,255,0.3);
 	content: attr(data-hover);
 	position: absolute;
@@ -2531,7 +2531,7 @@ nav a:focus {
 	bottom: 0;
 	width: 100%;
 	height: 2px;
-	background: #fff;
+	background: #313233;
 	opacity: 0;
 	-webkit-transform: translateY(5px);
 	-moz-transform: translateY(5px);
@@ -2604,7 +2604,7 @@ nav a:focus {
 
 .cl-effect-18 a:hover,
 .cl-effect-18 a:focus {
-	color: #fff;
+	color: #313233;
 }
 
 .cl-effect-18 a:hover::before,
@@ -2722,7 +2722,7 @@ nav a:focus {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #fff;
+	background: #313233;
 	color: #2f4351;
 	content: attr(data-hover);
 	-webkit-transform: rotateX(270deg);
@@ -2766,7 +2766,7 @@ nav a:focus {
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background: #fff;
+	background: #313233;
 	content: '';
 	opacity: 0;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -2793,7 +2793,7 @@ nav a:focus {
 
 .cl-effect-21 a:hover,
 .cl-effect-21 a:focus {
-	color: #fff;
+	color: #313233;
 }
 
 .cl-effect-21 a:hover::before,
