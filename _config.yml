@@ -4,3 +4,4 @@ theme: jekyll-theme-minimal
 description: I make tutorials!
 
 show_downloads: false
+show_description: false
