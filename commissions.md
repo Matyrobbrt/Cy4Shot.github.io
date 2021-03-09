@@ -1,6 +1,10 @@
 # Commissions
 Hello! I am now taking commissions for mods! I will create you a minecraft mod that you can use in your modpacks, or play with friends! I have plenty of experience in modding and have done many modding projects in the past. Note, I will only make mods for Forge 1.16+.
 
+## Reveiws
+Here are some reveiws from happy customers :D
+ - First time commissioning a mod, Cy4 did great! (SilverHatTrick, <a href="https://www.curseforge.com/minecraft/mc-mods/siege-ladders-mod">Siege Ladders Mod</a>)
+
 ## Pricing
 Unfortunately, this is not free D: The general pricing is listed below, but it is not final. I will discuss the pricing with you personally on discord. I will only send you the mod after you have paid, but you do not need to pay until I complete the mod.
  - Base Mod Price: $2
