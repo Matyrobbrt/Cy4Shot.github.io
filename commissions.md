@@ -1,5 +1,5 @@
 <h1 id="Commissions">Commissions</h1>
-Hello! I am now taking commissions for mods! I will create you a minecraft mod that you can use in your modpacks, or play with friends! I have plenty of experience in modding and have done many modding projects in the past. Note, I will only make mods for Forge 1.16+.
+Hello! I am now taking commissions for mods and textures! I will create you a minecraft mod that you can use in your modpacks, or a texture for your mod or resource packs! I have plenty of experience in modding and textures and have done many modding projects in the past. Note, I will only make mods for Forge 1.16+.
 
 <h2 id="Reveiws">Reveiws</h2>
 Here are some reveiws from happy customers :D
@@ -17,10 +17,10 @@ Unfortunately, this is not free D: The general pricing is listed below, but it i
  - For pricing for features not listed here, DM me on discord.
 
 <h2 id="Order">Order</h2>
-In order to commission a mod, DM me on discord (Cy4Shot#2695). Once you have proposed your mod idea, I will discuss the pricing with you and then create the mod. Depending on the mod, it will take a variable amount of time for me to complete the commission, but once I do, I will show you the result, and send you the mod file after it has been paid for.
+In order to commission a mod or texture, DM me on discord (Cy4Shot#2695). Once you have proposed your mod/texture idea, I will discuss the pricing with you and then create the product. Depending on the mod/texture, it will take a variable amount of time for me to complete the commission, but once I do, I will show you the result, and send you the mod or texture file after it has been paid for.
 
 <h2 id="Liscencing">Liscencing</h2>
 For any more details on liscencing contact me on discord!
- - You may NOT claim commissioned mods as your own.
- - You may use this in any modpack.
- - I will upload it onto curseforge to my own profile.
+ - You may NOT claim commissioned mods/textures as your own.
+ - You may use this in any modpack/resource pack.
+ - I will upload mods onto curseforge to my own profile.
