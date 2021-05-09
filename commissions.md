@@ -17,7 +17,7 @@ Unfortunately, this is not free D: The general pricing is listed below, but it i
  - For pricing for features not listed here, DM me on discord.
 
 <h2 id="Order">Order</h2>
-In order to commission a mod, DM me on discord (Cy4Shot#0001). Once you have proposed your mod idea, I will discuss the pricing with you and then create the mod. Depending on the mod, it will take a variable amount of time for me to complete the commission, but once I do, I will show you the result, and send you the mod file after it has been paid for.
+In order to commission a mod, DM me on discord (Cy4Shot#2695). Once you have proposed your mod idea, I will discuss the pricing with you and then create the mod. Depending on the mod, it will take a variable amount of time for me to complete the commission, but once I do, I will show you the result, and send you the mod file after it has been paid for.
 
 <h2 id="Liscencing">Liscencing</h2>
 For any more details on liscencing contact me on discord!
