@@ -5,6 +5,7 @@ Hello! I am now taking commissions for mods and textures! I will create you a mi
 Here are some reveiws from happy customers :D
  - First time commissioning a mod, Cy4 did great! (SilverHatTrick, <a href="https://www.curseforge.com/minecraft/mc-mods/siege-ladders-mod">Siege Ladders Mod</a>)
  - Speed of execution, flexibility at all levels! (LotuxPunk, Explorer's Book Texture)
+ - Cy4 did a great job creating what I needed, and figured out solutions for all the issues that arose. (Coda, <a href="https://www.curseforge.com/minecraft/mc-mods/moai">Moai</a>)
 
 <h2 id="Pricing">Pricing</h2>
 Unfortunately, this is not free D: The general pricing is listed below, but it is not final. I will discuss the pricing with you personally on discord. I will only send you the mod after you have paid, but you do not need to pay until I complete the mod.
