@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Variables - Java Tutorial</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction to Java</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="data_types.html"><strong aria-hidden="true">1.1.</strong> Datatypes</a></li><li class="chapter-item expanded "><a href="syntax.html"><strong aria-hidden="true">1.2.</strong> Syntax</a></li><li class="chapter-item expanded "><a href="operators.html"><strong aria-hidden="true">1.3.</strong> Operators</a></li><li class="chapter-item expanded "><a href="variables.html" class="active"><strong aria-hidden="true">1.4.</strong> Variables</a></li><li class="chapter-item expanded "><a href="control_flow.html"><strong aria-hidden="true">1.5.</strong> Control Flow</a></li><li class="chapter-item expanded "><a href="classes.html"><strong aria-hidden="true">1.6.</strong> Classes</a></li><li class="chapter-item expanded "><a href="naming_conventions.html"><strong aria-hidden="true">1.7.</strong> Naming Conventions</a></li><li class="chapter-item expanded "><a href="access_modifiers.html"><strong aria-hidden="true">1.8.</strong> Access Modifiers</a></li><li class="chapter-item expanded "><a href="essential_keywords.html"><strong aria-hidden="true">1.9.</strong> Essential Keywords</a></li><li class="chapter-item expanded "><a href="null_reference.html"><strong aria-hidden="true">1.10.</strong> Null Reference</a></li></ol></li><li class="chapter-item expanded "><a href="advanced.html"><strong aria-hidden="true">2.</strong> More Advanced Java</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="interfaces.html"><strong aria-hidden="true">2.1.</strong> Interfaces</a></li><li class="chapter-item expanded "><a href="enums.html"><strong aria-hidden="true">2.2.</strong> Enums</a></li><li class="chapter-item expanded "><a href="oop.html"><strong aria-hidden="true">2.3.</strong> Object Oriented Programming</a></li><li class="chapter-item expanded "><a href="solid.html"><strong aria-hidden="true">2.4.</strong> SOLID</a></li><li class="chapter-item expanded "><a href="anonymous_and_abstract.html"><strong aria-hidden="true">2.5.</strong> Anonymous and Abstract Classes</a></li><li class="chapter-item expanded "><a href="lambda.html"><strong aria-hidden="true">2.6.</strong> Lambda Expressions</a></li><li class="chapter-item expanded "><a href="method_references.html"><strong aria-hidden="true">2.7.</strong> Method References</a></li><li class="chapter-item expanded "><a href="mutability_immutability.html"><strong aria-hidden="true">2.8.</strong> Mutability and Immutability</a></li><li class="chapter-item expanded "><a href="data_structures.html"><strong aria-hidden="true">2.9.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="generics.html"><strong aria-hidden="true">2.10.</strong> Generics</a></li><li class="chapter-item expanded "><a href="exceptions.html"><strong aria-hidden="true">2.11.</strong> Exceptions</a></li><li class="chapter-item expanded "><a href="streams.html"><strong aria-hidden="true">2.12.</strong> Streams</a></li><li class="chapter-item expanded "><a href="garbage_collector.html"><strong aria-hidden="true">2.13.</strong> Garbage Collector and Statics</a></li><li class="chapter-item expanded "><a href="concurrency.html"><strong aria-hidden="true">2.14.</strong> Concurrency</a></li></ol></li><li class="chapter-item expanded "><a href="using_apis.html"><strong aria-hidden="true">3.</strong> Using APIs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="time_apis.html"><strong aria-hidden="true">3.1.</strong> Time APIs</a></li><li class="chapter-item expanded "><a href="java_io.html"><strong aria-hidden="true">3.2.</strong> Java IO</a></li><li class="chapter-item expanded "><a href="java_nio.html"><strong aria-hidden="true">3.3.</strong> Java NIO</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Java Tutorial</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
+<p>A variable is a labeled container that can contain a single value of it's type.</p>
+<p>Variables consist of:</p>
+<ol>
+<li>Type</li>
+<li>Label</li>
+<li>Value</li>
+</ol>
+<p>We've discussed the syntax of variables in the previous sections.</p>
+<pre><code class="language-java">int foo = 1;
+</code></pre>
+<ul>
+<li><code>int</code> is the type.</li>
+<li><code>foo</code> is the label.</li>
+<li><code>1</code> is the value.</li>
+</ul>
+<p>As we've mentioned before, variables can either be of a reference or primitive type. They both have their default values (or references) when we've only declared them.</p>
+<p>In this chapter, we will cover <strong>4</strong> types of variables:</p>
+<ul>
+<li>Instance Variable</li>
+<li>Class Variable</li>
+<li>Local Variable</li>
+<li>Parameter Variable</li>
+</ul>
+<h2 id="instance-variables"><a class="header" href="#instance-variables">Instance Variables</a></h2>
+<p>Instance variables (fields) are variables that belong to an instance of a particular class. For example, behold a class <code>Car</code>.</p>
+<pre><code class="language-java">class Car {
+  float speed;
+  String make;
+}
+</code></pre>
+<p>We will discuss the syntax of classes in the next section.
+The class currently has 2 instance fields (<code>speed</code>, <code>make</code>) which have no value assigned (the <code>speed</code> value defaults to <code>0.0f</code> and the <code>make</code>'s reference defaults to a <code>null</code> reference).</p>
+<p>Classes in java inherit from a superclass called <code>Object</code>, which has an empty <strong>constructor</strong> available.
+That means we can do:</p>
+<pre><code class="language-java">Car car = new Car();
+</code></pre>
+<p>In order to create our first car. Now to assign values to our fields, we simply do:</p>
+<pre><code class="language-java">Car car = new Car();
+car.speed = 1f;
+car.make = &quot;Ford&quot;;
+</code></pre>
+<p>Instance variables just mean that they belong to an <strong>instance of a class</strong> (also known as an object, not to be confused with the class <code>Object</code>), they don't represent a global state and are completely instance dependent. We will discuss instances and classes later.</p>
+<h2 id="class-variables"><a class="header" href="#class-variables">Class Variables</a></h2>
+<p>Class variables, are those which are declared with the <code>static</code> modifier and belong to the class rather than to an instance of the class (object).
+A class variable is loaded on a load of a class (since it belongs to the class) instead of an instantiation of a class. Since it represents a global state, it's value will be the same across all instances or static contexts.</p>
+<p>A class variable <strong>cannot</strong> be garbage collected, unless it's reference or value is set to <code>null</code> manually, or unless the class it's contained in is unloaded.</p>
+<h2 id="local-variables"><a class="header" href="#local-variables">Local Variables</a></h2>
+<p>Local variables are those we define in the scope of a function. A scope is simply a region of code, as shown in the example below: </p>
+<pre><code class="language-java">class Car {
+  float speed;
+  String make;
+
+  void drive() {
+    speed = 1f;   
+  }
+
+  void stop() {
+    speed = 0f;
+  }
+}
+</code></pre>
+<p>Within the scope of the <code>drive</code> method, we can access all instance variables such as the variable <code>speed</code>.
+If we would create a <strong>local variable</strong> inside the method <code>drive</code>, it would be only accessible in the scope of the method, not outside the method.</p>
+<pre><code class="language-java">class Car {
+  float speed;
+  String make;
+
+  void drive() {
+    int foo = 1;
+    speed = 1f;   
+  }
+
+  void stop() {
+    foo = 2; //ERROR: undefined variable
+    speed = 0f;
+  }
+}
+</code></pre>
+<h2 id="parameter-variables"><a class="header" href="#parameter-variables">Parameter Variables</a></h2>
+<p>Parameters, are variables that are passed into <strong>functions</strong>. Functions include a <strong>constructor</strong> and a <strong>method</strong>.
+Let's modify our last example:</p>
+<pre><code class="language-java">class Car {
+  float speed;
+  String make;
+
+  void drive(float newSpeed) {
+    speed = newSpeed;
+  }
+
+  void stop() {
+    speed = 0f;
+  }
+}
+</code></pre>
+<p>One important thing to remember is that, <strong>primitive types are pass-by-value</strong> and <strong>reference types are pass-by-reference</strong>.
+This means that if we create an instance of our class <code>Car</code> and call the <code>drive</code> method, we need to pass in a  parameter (a <code>float</code>).</p>
+<pre><code class="language-java">Car car = new Car();
+car.drive(2f);
+</code></pre>
+<p>The value will be passed into the method and turnt into a local variable in our scope of <code>drive</code>. If we would predefine a variable called speed and then pass it into the method:</p>
+<pre><code class="language-java">Car car = new Car();
+float speed = 2f;
+
+car.drive(speed);
+</code></pre>
+<p>And then change the value inside the method <code>drive</code>, it's value would only be changed in the scope of the method we called. The original variable <code>speed</code> would still have the value <code>2f</code> no matter what.
+This is because primitive types are pass by value, so their value gets copied into the method parameter.</p>
+<p>To finish the parameter section, reference types are pass-by-reference as we said. We are still not allowed to change the references of objects when they are passed into functions. The only difference is that there is no copy of an object made, the object that was passed into the function is still the same object. This means that we can still change the fields (mutate) the original object, however we are only not allowed to change the reference (again, only in the scope of the method).</p>
+<pre><code class="language-java">Car toyota = new Car();
+
+Car ford = new Car(toyota);
+</code></pre>
+<p>There is a new concept used, which is a <strong>constructor</strong>.</p>
+<pre><code class="language-java">class Car {
+  float speed;
+  String make;
+
+  Car() { //empty 
+  }
+
+  Car(Car car) {
+    car.speed = 1;
+    car.make = &quot;Ford&quot;;
+  }
+
+  void drive() {
+   // ..
+  }
+}
+</code></pre>
+<p>The instance variables (fields) of <code>toyota</code> <strong>will change</strong> to the ones we have defined in the <code>Car</code> constructor (<code>1</code>, <code>Ford</code>), but if we attempt to change the reference of the parameter <code>car</code> to for example a <code>null</code> reference, nothing will change and we will still be able to operate with our original <code>toyota</code>.</p>
+<pre><code class="language-java">class Car {
+  float speed;
+  String make;
+
+  Car() { //empty 
+  }
+
+  Car(Car car) {
+    car.speed = 1;
+    car.make = &quot;Ford&quot;;
+    car = null; // this is fine
+  }
+
+  void drive() {
+   // ..
+  }
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="operators.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="control_flow.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="operators.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="control_flow.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
