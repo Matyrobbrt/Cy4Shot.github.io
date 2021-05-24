@@ -166,51 +166,52 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="control-flow"><a class="header" href="#control-flow">Control Flow</a></h1>
-<p>Control flows allows us to iterate and make desicions inside our code.</p>
+<p>Control flow allows us to iterate and make desicions inside our code.</p>
 <h2 id="if-statements"><a class="header" href="#if-statements">If Statements</a></h2>
-<p>We will begin with if statements. The syntax is the following:</p>
+<p>We will begin with <code>if</code> statements. The syntax is the following:</p>
 <pre><code class="language-java">if (condition) {
  
 }
 </code></pre>
-<p>First, we begin with the <code>if</code> keyword, then put brackets around and a boolean expression inside the brackets. Then we add a thing called an <strong>if body</strong>, which is just two {} brackets that introduce a scope.</p>
-<p>We have used if statements before, they are quite simple.</p>
+<p>First, we begin with the <code>if</code> keyword, then put brackets around a boolean expression. Then we add something called an <strong>if body</strong>, which is just two <code>{}</code> brackets that introduce a scope.</p>
+<p>We have used <code>if</code> statements before, they are quite simple:</p>
 <pre><code class="language-java">if (true) {
   // code ran when true
 } else {
   // code ran when false
 }
 </code></pre>
-<p>With our boolean expressions, we can also apply things such as <code>||</code> or <code>&amp;&amp;</code> when needed, or possibly invert our boolean expression.</p>
+<p>With our boolean expressions, we can also apply things such as <code>||</code> or <code>&amp;&amp;</code> when needed, or possibly invert our boolean expression with an <code>!</code>.</p>
 <h2 id="for-loops"><a class="header" href="#for-loops">For Loops</a></h2>
-<p>The second control flow statement is a for loop which is a bit harder.
+<p>The second control flow statement is a <code>for</code> loop which is a bit harder.
 Syntax is the following:</p>
 <pre><code class="language-java">for (declaration; condition; operation) {
 
 }
 </code></pre>
-<p>We first declare a variable (such as an <code>int</code>), then a condition and finally an operation.</p>
-<p>The simpliest form of a for loop is:</p>
+<p>We first declare a variable (such as an <code>int</code>), then a condition, and finally an operation.</p>
+<p>The simpliest form of a <code>for</code> loop is:</p>
 <pre><code class="language-java">for (int counter = 0; counter &lt; 10; counter++) {
   // code here will run 10 times
+  // counter will range from 0 to 9, each time the code is run
 }
 </code></pre>
 <p>We first declare an <code>int</code> variable <code>counter</code> and assign it the value <code>0</code>, then we specify a condition (a boolean expression which is <code>counter &lt; 10</code> here), and then we tell the loop what to do when the condition is true. Here, we increment the variable <code>counter</code> by one.</p>
 <h2 id="while-loops"><a class="header" href="#while-loops">While Loops</a></h2>
-<p>The while loop is also a loop, but it only takes a condition (boolean expression) to run. The loop will run if the condition will be true. Once the expression will return false, the loop will automatically <strong>break</strong>. <strong>break</strong> is also a keyword, that we will discuss soon alongside with the keyword <strong>continue</strong>. Let's see this example of a while loop that will run infinitely.</p>
+<p>The <code>while</code> loop is also a loop, but it only takes a condition (boolean expression) to run. The loop will run if the condition will be true. Once the expression returns <code>false</code>, the loop will automatically <strong>break</strong>. Let's see an example of a <code>while</code> loop that will run infinitely:</p>
 <pre><code class="language-java">while (true) {
  // ..
 }
 </code></pre>
-<p>The do-while loop is essentially almost the same as the while loop and the syntax is the following:</p>
+<p>The <code>do-while</code> loop is essentially the same as the <code>while</code> loop. An example of the syntax is shown below:</p>
 <pre><code class="language-java">do {
  //code is ran once
 } while (false);
 </code></pre>
-<p>Now, the only difference here is that the code inside the scope of <code>do</code> will run <strong>at least once</strong>, even if the expression in <code>while</code> returns always <code>false</code>.</p>
+<p>Now, the only difference here is that the code inside the scope of <code>do</code> will run <strong>at least once</strong>, even if the expression in <code>while</code> always returns <code>false</code>.</p>
 <h2 id="switch-statements"><a class="header" href="#switch-statements">Switch Statements</a></h2>
-<p>Switch is a way how to chain more if statements with the option of breaking. Switch consists of cases and a default (optional).
-See this example:</p>
+<p>Switch is a way how to chain more <code>if</code> statements with the option of breaking. Switch consists of cases and a default (optional).
+Behold the code below:</p>
 <pre><code class="language-java">int foo = 1;
 switch (foo) {
   case 1: {
@@ -222,8 +223,8 @@ switch (foo) {
 }
 </code></pre>
 <p>As you can see, if switch meets the correct case, it will keep going through all the other cases below it until it meets a <code>break</code>. 
-We can also add a default to the switch to run some code if none of the cases is the value specified.</p>
-<p>Note that we can only use enumerations, strings and all primitives in a switch, no other <strong>objects</strong>.</p>
+We can also add a default to the switch to run some code if none of the cases are the value specified.</p>
+<p>Note that we can only use enumerations, strings, and all primitives in a switch, no other <strong>objects</strong>.</p>
 <p>I will explain why is an enumeration and a string possible in a switch later.</p>
 <pre><code class="language-java">int foo = 1;
 switch (foo) {
@@ -242,9 +243,9 @@ switch (foo) {
 }
 </code></pre>
 <h2 id="break-and-continue-keywords"><a class="header" href="#break-and-continue-keywords">Break and Continue Keywords</a></h2>
-<p>As we have seen, the <strong>break</strong> keyword can be used in a loop but also in a switch, however the <strong>continue</strong> keyword can only be used in loops.</p>
-<p>The break keyword ends execution of the control flow statement (such as a loop or a switch) and the continue keyword skips 1 iteration in the loop (but not ending it entirely)</p>
-<p>We will later discuss the keyword return and how it's similar to the keyword <strong>continue</strong>, it essentially does the same thing but <strong>continue</strong> only returns from the control flow statement, while <strong>return</strong> returns from an entire function.</p>
+<p>As we have seen, the <strong>break</strong> keyword can be used in a loop and in a <code>switch</code>. However the <strong>continue</strong> keyword can only be used in loops.</p>
+<p>The break keyword ends execution of the control flow statement (such as a loop or a switch) and the continue keyword skips 1 iteration in the loop (but not ending it entirely).</p>
+<p>We will later discuss the keyword <code>return</code> and how it's similar to the keyword <strong>continue</strong>: it essentially does the same thing but <strong>continue</strong> only returns from the control flow statement, while <strong>return</strong> returns from an entire function.</p>
 <pre><code class="language-java">int foo = 0;
 while (foo &lt; 10) {
   if (foo &lt;= 5) {
@@ -256,8 +257,8 @@ while (foo &lt; 10) {
   // do extra work here
 }
 </code></pre>
-<p>Now, code here will only increment <code>foo</code> by one 6 times and by saying <code>continue</code>, we skip the current execution (iteration) of the control flow statement, so anything after the first if statement doesn't get executed.
-If we would use a <strong>break</strong> however, the entire execution of the loop would be terminated.</p>
+<p>Now, code here will only increment <code>foo</code> by one, 6 times. By calling the <code>continue</code> keyword, we skip the current execution (iteration) of the control flow statement. Anything after the first <code>if</code> statement doesn't get executed.
+If we would use a <strong>break</strong> however, the entire execution of the loop would be terminated:</p>
 <pre><code class="language-java">int foo = 0;
 while (foo &lt; 10) {
   if (foo &lt;= 5) {
@@ -270,7 +271,7 @@ while (foo &lt; 10) {
 }
 </code></pre>
 <h2 id="chaining-if-statements"><a class="header" href="#chaining-if-statements">Chaining If Statements</a></h2>
-<p>In addition to if statements, we can write multiple if statements like this:</p>
+<p>In addition to <code>if</code> statements, we can write multiple <code>if</code> statements like this:</p>
 <pre><code class="language-java">if (condition) {
  // ..
 } else if (condition) {
@@ -281,8 +282,8 @@ while (foo &lt; 10) {
  // ..
 }
 </code></pre>
-<p>Which would run any of the if statements if their condition would be true, but note that the difference between writing them as separate statements is that if one of the if statements is true, the statements after it don't get executed anymore, kinda like a switch with a break in every case.</p>
-<p>If none of those conditions would be true however, the <code>else</code> statement would run.</p>
+<p>Which would run any of the <code>if</code> statements if their conditions are true, but note that the difference between writing them as separate statements is that if one of the if statements is true, the statements after it don't get executed anymore, similar to a switch with a break in every case.</p>
+<p>If none of those conditions return <code>true</code>, the <code>else</code> statement would run.</p>
 
                     </main>
 

@@ -166,7 +166,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="operators"><a class="header" href="#operators">Operators</a></h1>
-<p>Operators are actions that let us control our variables inside java. In this chapter I will discuss <strong>5</strong> different types of operators:</p>
+<p>Operators are actions that let us control our variables inside Java. In this chapter I will discuss <strong>5</strong> different types of operators:</p>
 <ol>
 <li>Assignment Operators</li>
 <li>Arithmetic Operators</li>
@@ -183,10 +183,10 @@
 <pre><code class="language-java">int foo;
 foo = 1;
 </code></pre>
-<p>The first is doing a declaration &amp; an assignment at the same time, while the other is split into declaration and assignment (we will discuss this later in the section <strong>7</strong> (<em>OOP</em>))</p>
+<p>The first is doing a declaration and an assignment at the same time, while the other is split into declaration and assignment (we will discuss this later in the section <strong>7</strong> (<em>OOP</em>))</p>
 <p>If we are working with primitives, we are assigning those variables a <code>value</code>.
-And if we are working with reference types, we are assigning those variables a <code>reference</code>.</p>
-<p>We will explain the differences between those two, and on how java handles them.</p>
+If we are working with reference types, we are assigning those variables a <code>reference</code>.</p>
+<p>I will explain the differences between those two, and how java handles them.</p>
 <h2 id="arithmetic-operators"><a class="header" href="#arithmetic-operators">Arithmetic Operators</a></h2>
 <p>These are <strong>five</strong> arithmetic operators available:</p>
 <ul>
@@ -197,14 +197,14 @@ And if we are working with reference types, we are assigning those variables a <
 <li><code>%</code>, modulo (remainder)</li>
 </ul>
 <p>Those can be only used while working with primitive types.
-The only exception is a <strong>string concatenation</strong>, where we want to put two sequence of characters (string literals) together. The java compiler then uses a class in the JDK called <strong>StringBuilder</strong> and concatenate those strings together.</p>
+The only exception is a <strong>string concatenation</strong>, where we want to put two sequence of characters (string literals) together. The java compiler then uses a class in the JDK called <strong>StringBuilder</strong> and concatenates those strings together.</p>
 <p>An example usage of those operators:</p>
 <pre><code class="language-java">int foo = 1;
 int bar = 2;
 
 int result = foo + bar;
 </code></pre>
-<p>Also we don't have to declare a those variables called <code>foo</code>, <code>bar</code>.
+<p>Also we don't have to declare a those variables called <code>foo</code>, <code>bar</code>:
 It can also be written like this</p>
 <pre><code class="language-java">int result = 1 + 2;
 </code></pre>
@@ -213,13 +213,13 @@ It can also be written like this</p>
 <h2 id="unary-operators"><a class="header" href="#unary-operators">Unary Operators</a></h2>
 <p>Unary Operators are arithmetic operators that only use 1 variable as input data. Here are <strong>5</strong> unary operators:</p>
 <ul>
-<li><code>+</code> gives a value (or a variable) a positive value </li>
-<li><code>-</code> gives a value (or a variable) a negative value</li>
-<li><code>++</code> an addition operator that increases a variable value by 1. Can only be performed on variables, and there are two ways of using this operator, we will discuss them.</li>
-<li><code>--</code> a subtraction operator that decreases a variable value by 1. can only be performed on variables, just like the <code>++</code> operator.</li>
-<li><code>!</code> inverts the value of a boolean (we will see an example of that)</li>
+<li><code>+</code>: gives a value (or a variable) a positive value </li>
+<li><code>-</code>: gives a value (or a variable) a negative value</li>
+<li><code>++</code>: an addition operator that increases a variable value by 1. Can only be performed on variables, and there are just two ways of using this operator.</li>
+<li><code>--</code>: a subtraction operator that decreases a variable value by 1. Can only be performed on variables, just like the <code>++</code> operator.</li>
+<li><code>!</code>: inverts the value of a boolean (we will see an example of that)</li>
 </ul>
-<p><em>The</em> <code>+</code><em>,</em> <code>-</code> <em>operators are simply used in value assignment to either give a variable a positive/negative value.</em></p>
+<p><em>The</em> <code>+</code> <em>and</em> <code>-</code> <em>operators are simply used in value assignment to either give a variable a positive/negative value.</em></p>
 <p>Behold this code:</p>
 <pre><code class="language-java">int foo = -10;
 //foo is now -10
@@ -238,21 +238,21 @@ int result = ++foo;
 </code></pre>
 <p>To explain the process, first, the variable <code>foo</code> is incremented by one and then assigned to the variable result, so both <code>foo</code> and <code>result</code> will be <code>11</code> here.</p>
 <p>Now, the last operator, the boolean invert operator is very simple.
-It can only be used on boolean values <code>true</code>, <code>false</code> and all it's self explanatory.
+It can only be used on boolean values: <code>true</code> and <code>false</code>.
 An example of that is:</p>
 <pre><code class="language-java">boolean foo = true;
 boolean bar = !foo;
 </code></pre>
-<p>Now, the value of <code>foo</code> will remain <code>true</code>, as the operator doesn't change the value of the original variable (it's not an assignment, so it differs from the last two operators), and the variable <code>bar</code> will have the value <code>false</code>, because we have inverted it. This can obviously be used the other way around aswell (if we start with <code>false</code>).</p>
+<p>Now, the value of <code>foo</code> will remain <code>true</code>, as the operator doesn't change the value of the original variable (it's not an assignment, so it differs from the last two operators), and the variable <code>bar</code> will have the value <code>false</code>, because we have inverted it. This can obviously be used the other way around as well, if we start with <code>false</code>.</p>
 <h2 id="boolean-operators"><a class="header" href="#boolean-operators">Boolean Operators</a></h2>
 <p>Here I will discuss <strong>10</strong> different boolean operators:</p>
 <ul>
-<li><code>==</code>, compares a value when used on primitive types and a reference when used on reference types</li>
-<li><code>&gt;=</code>, is greater than or equal </li>
-<li><code>&lt;=</code>, is less than or equal </li>
-<li><code>&gt;</code>, is greater than </li>
-<li><code>&lt;</code>, is less than</li>
-<li><code>!=</code>, an inverted <code>==</code> operator (is not equal to)</li>
+<li><code>==</code>, compares a value when used on primitive types and a reference when used on reference types.</li>
+<li><code>&gt;=</code>, is greater than or equal.</li>
+<li><code>&lt;=</code>, is less than or equal.</li>
+<li><code>&gt;</code>, is greater than.</li>
+<li><code>&lt;</code>, is less than.</li>
+<li><code>!=</code>, an inverted <code>==</code> operator (is not equal to).</li>
 <li><code>&amp;&amp;</code>, boolean <em>AND</em>, used to combine many boolean expressions together and check if they <strong>all</strong> return true and returns a boolean value (<code>true</code>, <code>false</code>) depending on that.</li>
 <li><code>||</code>, boolean <em>OR</em>, used to combine many boolean expressions together and check if <strong>at least one</strong> of them is true and returns a boolean value (<code>true</code>, <code>false</code>) depending on that.</li>
 <li><code>instanceof</code>, used for checking if an <strong>object</strong> is an instance of a particular class or it's subtype.</li>
@@ -273,7 +273,7 @@ However, this expression:</p>
 <pre><code class="language-java">boolean foo = 1 &lt; 2 &amp;&amp; 2 &lt; 1;
 </code></pre>
 <p>Would hold the value <code>false</code>, because the second expression returned <code>false</code>.</p>
-<p>Now, boolean expressions can be used in many places where a boolean is needed. For example an <code>if</code> statement (we will go through those as well).</p>
+<p>Now, boolean expressions can be used in many places where a boolean is needed. For example, an <code>if</code> statement (we will go through those as well).</p>
 <pre><code class="language-java">int foo = 5;
 int bar = 10;
 
@@ -282,7 +282,7 @@ if (bar &gt; foo) {
 }
 </code></pre>
 <p>As for understanding the <code>instanceof</code> operator, you may have to go through the <strong>object oriented programming</strong> section.
-However, here is an example:</p>
+Here is an example:</p>
 <pre><code class="language-java">Object object = new Boolean(Boolean.TRUE);
 boolean foo = object instanceof Boolean;
 </code></pre>

@@ -166,14 +166,14 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
-<p>A variable is a labeled container that can contain a single value of it's type.</p>
+<p>A variable is a labelled container that can contain a single value of its type.</p>
 <p>Variables consist of:</p>
 <ol>
 <li>Type</li>
 <li>Label</li>
 <li>Value</li>
 </ol>
-<p>We've discussed the syntax of variables in the previous sections.</p>
+<p>We've discussed the syntax of variables in the previous sections:</p>
 <pre><code class="language-java">int foo = 1;
 </code></pre>
 <ul>
@@ -190,7 +190,7 @@
 <li>Parameter Variable</li>
 </ul>
 <h2 id="instance-variables"><a class="header" href="#instance-variables">Instance Variables</a></h2>
-<p>Instance variables (fields) are variables that belong to an instance of a particular class. For example, behold a class <code>Car</code>.</p>
+<p>Instance variables (fields) are variables that belong to an instance of a particular class. For example, behold a class <code>Car</code>:</p>
 <pre><code class="language-java">class Car {
   float speed;
   String make;
@@ -207,7 +207,7 @@ That means we can do:</p>
 car.speed = 1f;
 car.make = &quot;Ford&quot;;
 </code></pre>
-<p>Instance variables just mean that they belong to an <strong>instance of a class</strong> (also known as an object, not to be confused with the class <code>Object</code>), they don't represent a global state and are completely instance dependent. We will discuss instances and classes later.</p>
+<p>Instance variables just mean that they belong to an <strong>instance of a class</strong> (also known as an object, not to be confused with the class <code>Object</code>); they don't represent a global state and are completely instance dependent. We will discuss instances and classes later.</p>
 <h2 id="class-variables"><a class="header" href="#class-variables">Class Variables</a></h2>
 <p>Class variables, are those which are declared with the <code>static</code> modifier and belong to the class rather than to an instance of the class (object).
 A class variable is loaded on a load of a class (since it belongs to the class) instead of an instantiation of a class. Since it represents a global state, it's value will be the same across all instances or static contexts.</p>
@@ -228,7 +228,7 @@ A class variable is loaded on a load of a class (since it belongs to the class) 
 }
 </code></pre>
 <p>Within the scope of the <code>drive</code> method, we can access all instance variables such as the variable <code>speed</code>.
-If we would create a <strong>local variable</strong> inside the method <code>drive</code>, it would be only accessible in the scope of the method, not outside the method.</p>
+If we would create a <strong>local variable</strong> inside the method <code>drive</code>, it would only be accessible in the scope of the method, not outside the method:</p>
 <pre><code class="language-java">class Car {
   float speed;
   String make;
@@ -245,7 +245,7 @@ If we would create a <strong>local variable</strong> inside the method <code>dri
 }
 </code></pre>
 <h2 id="parameter-variables"><a class="header" href="#parameter-variables">Parameter Variables</a></h2>
-<p>Parameters, are variables that are passed into <strong>functions</strong>. Functions include a <strong>constructor</strong> and a <strong>method</strong>.
+<p>Parameters are variables that are passed into <strong>functions</strong>. Functions include a <strong>constructor</strong> and a <strong>method</strong>.
 Let's modify our last example:</p>
 <pre><code class="language-java">class Car {
   float speed;
@@ -260,25 +260,25 @@ Let's modify our last example:</p>
   }
 }
 </code></pre>
-<p>One important thing to remember is that, <strong>primitive types are pass-by-value</strong> and <strong>reference types are pass-by-reference</strong>.
-This means that if we create an instance of our class <code>Car</code> and call the <code>drive</code> method, we need to pass in a  parameter (a <code>float</code>).</p>
+<p>One important thing to remember is that <strong>primitive types</strong> are <strong>pass-by-value</strong> and <strong>reference types</strong> are <strong>pass-by-reference</strong>.
+This means that if we create an instance of our class <code>Car</code> and call the <code>drive</code> method, we need to pass in a  parameter (a <code>float</code>):</p>
 <pre><code class="language-java">Car car = new Car();
 car.drive(2f);
 </code></pre>
-<p>The value will be passed into the method and turnt into a local variable in our scope of <code>drive</code>. If we would predefine a variable called speed and then pass it into the method:</p>
+<p>The value will be passed into the method and turned into a local variable in our scope of <code>drive</code>. If we would predefine a variable called speed and then pass it into the method:</p>
 <pre><code class="language-java">Car car = new Car();
 float speed = 2f;
 
 car.drive(speed);
 </code></pre>
-<p>And then change the value inside the method <code>drive</code>, it's value would only be changed in the scope of the method we called. The original variable <code>speed</code> would still have the value <code>2f</code> no matter what.
+<p>And then change the value inside of the method <code>drive</code>, its value would only be changed in the scope of the method we called. The original variable, <code>speed</code>, would still have the value <code>2f</code> no matter what.
 This is because primitive types are pass by value, so their value gets copied into the method parameter.</p>
-<p>To finish the parameter section, reference types are pass-by-reference as we said. We are still not allowed to change the references of objects when they are passed into functions. The only difference is that there is no copy of an object made, the object that was passed into the function is still the same object. This means that we can still change the fields (mutate) the original object, however we are only not allowed to change the reference (again, only in the scope of the method).</p>
+<p>To finish the parameter section, reference types are pass-by-reference as we said. We are still not allowed to change the references of objects when they are passed into functions. The only difference is that there is no copy of an object made, as the object that was passed into the function is still the same object. This means that we can still change the fields of (mutate) the original object, however we aren't allowed to change the reference in the scope of the method.</p>
 <pre><code class="language-java">Car toyota = new Car();
 
 Car ford = new Car(toyota);
 </code></pre>
-<p>There is a new concept used, which is a <strong>constructor</strong>.</p>
+<p>There is a new concept used, which is a <strong>constructor</strong>:</p>
 <pre><code class="language-java">class Car {
   float speed;
   String make;
@@ -296,7 +296,7 @@ Car ford = new Car(toyota);
   }
 }
 </code></pre>
-<p>The instance variables (fields) of <code>toyota</code> <strong>will change</strong> to the ones we have defined in the <code>Car</code> constructor (<code>1</code>, <code>Ford</code>), but if we attempt to change the reference of the parameter <code>car</code> to for example a <code>null</code> reference, nothing will change and we will still be able to operate with our original <code>toyota</code>.</p>
+<p>The instance variables (fields) of <code>toyota</code> <strong>will change</strong> to the ones we have defined in the <code>Car</code> constructor (<code>1</code>, <code>Ford</code>), but if we attempt to change the reference of the parameter <code>car</code> to, for example, a <code>null</code> reference, nothing will change and we will still be able to operate with our original <code>toyota</code>:</p>
 <pre><code class="language-java">class Car {
   float speed;
   String make;

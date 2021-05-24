@@ -192,9 +192,9 @@
 <p>Primitive data types include:</p>
 <ul>
 <li><code>byte</code>, can store values of <code>-128</code> to <code>127</code>  (1 byte)</li>
-<li><code>short</code>, can store value of <code>-32768</code> to <code>32767</code> (2 bytes)</li>
-<li><code>int</code>, can store value of <code>-2147483648</code> to <code>2147483647</code> (4 bytes)</li>
-<li><code>long</code>, can store value of <code>-9223372036854775808</code> to <code>9223372036854775807</code> (8 bytes)</li>
+<li><code>short</code>, can store values of <code>-32768</code> to <code>32767</code> (2 bytes)</li>
+<li><code>int</code>, can store values of <code>-2147483648</code> to <code>2147483647</code> (4 bytes)</li>
+<li><code>long</code>, can store values of <code>-9223372036854775808</code> to <code>9223372036854775807</code> (8 bytes)</li>
 <li><code>char</code>, can store characters (2 bytes)</li>
 <li><code>double</code>, can store decimal numbers (8 bytes)</li>
 <li><code>float</code>, can store decimal numbers (4 bytes)</li>
@@ -206,24 +206,24 @@
 <p><strong>Important notes:</strong></p>
 <ul>
 <li>Reference data types are objects, while primitive data types aren't.</li>
-<li>Primitive data types can not point to <code>null</code> reference while reference data types can.</li>
+<li>Primitive data types cannot point to <code>null</code> reference while reference data types can.</li>
 <li>The value of reference data types defaults to <code>null</code>, however. In the case of primitives, their default value is assigned (the minimum value).</li>
 </ul>
 <p>Now we will discuss some of the reference types.</p>
 <ul>
-<li><code>String</code>, which is a class that is <strong>immutable</strong>, is essentially a type for a sequence of characters with a few useful methods. The string can be of any length that must be within the maximum value of an <code>int</code> data type.</li>
-<li><code>Array</code>, arrays in java are objects that can be created of any type, regardless if it's a primitive or a reference type. An array is a linear data structure that holds elements. It can have a length that must be within the max value of the data type <code>int</code>. If a value below <code>0</code> is specified, a <code>NegativeArraySizeException</code> is thrown. We will also cover exceptions and all of the other things in the next tutorials.</li>
+<li><code>String</code>: a class that is <strong>immutable</strong>, is essentially a type for a sequence of characters with a few useful methods. The string can be of any length that must be within the maximum value of an <code>int</code> data type.</li>
+<li><code>Array</code>: arrays in java are objects that can be created of any type, regardless if it's a primitive or a reference type. An array is a linear data structure that holds elements. It can have a length that must be within the max value of the data type <code>int</code>. If a value below <code>0</code> is specified, a <code>NegativeArraySizeException</code> is thrown. We will also cover exceptions and all of the other things in the next tutorials.</li>
 </ul>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="syntax---declaration"><a class="header" href="#syntax---declaration">Syntax - Declaration</a></h1>
 <p>First, we will begin with the basic syntax of declarations.
-To declare a variable, we simply choose the type of the variable (we will use <code>int</code>) and give it a name.</p>
+To declare a variable, we simply choose the type of variable (we will use <code>int</code>) and give it a name.</p>
 <pre><code class="language-java">int foo;
 </code></pre>
 <p>To declare multiple variables with the same type, we can use:</p>
 <pre><code class="language-java">int foo, foo1, foo2;
 </code></pre>
 <p><strong>Important note:</strong>
-Every declaration ends with a <code>;</code> character, essentially means &quot;end of command&quot;, a command can be anything such as a method call or a variable declaration. We will discuss it more later.</p>
+Every declaration ends with a <code>;</code> character, essentially meaning &quot;end of command&quot;, a command can be anything such as a method call or a variable declaration. We will discuss it more later.</p>
 <p>Now, this style of declaration is also valid for any other data types (reference or primitive)
 We can for example also do:</p>
 <pre><code class="language-java">String foo;
@@ -231,10 +231,10 @@ We can for example also do:</p>
 <p>and</p>
 <pre><code class="language-java">String foo, foo1, foo2;
 </code></pre>
-<p>Remember that the term <code>value</code> is often only used when working with primitive types, when we are working with reference types, we usually store a <em>reference</em> to a particular object.</p>
-<p>The only real difference we need to be careful about when declaring is as I've said before the default value of the variables. If they do not have a value assigned, for reference types it defaults to <code>null</code> reference and for primitive values, it defaults to their minimum value, as said in the section above.</p>
+<p>Remember that the term <code>value</code> is often only used when working with primitive types. When working with reference types, we usually store a <em>reference</em> to a particular object.</p>
+<p>The only real difference is that we need to be careful about when declaring is as I've said before the default value of the variables. If they do not have a value assigned, for reference types it defaults to <code>null</code> reference and for primitive values it defaults to their minimum value, as said in the section above.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="operators"><a class="header" href="#operators">Operators</a></h1>
-<p>Operators are actions that let us control our variables inside java. In this chapter I will discuss <strong>5</strong> different types of operators:</p>
+<p>Operators are actions that let us control our variables inside Java. In this chapter I will discuss <strong>5</strong> different types of operators:</p>
 <ol>
 <li>Assignment Operators</li>
 <li>Arithmetic Operators</li>
@@ -251,10 +251,10 @@ We can for example also do:</p>
 <pre><code class="language-java">int foo;
 foo = 1;
 </code></pre>
-<p>The first is doing a declaration &amp; an assignment at the same time, while the other is split into declaration and assignment (we will discuss this later in the section <strong>7</strong> (<em>OOP</em>))</p>
+<p>The first is doing a declaration and an assignment at the same time, while the other is split into declaration and assignment (we will discuss this later in the section <strong>7</strong> (<em>OOP</em>))</p>
 <p>If we are working with primitives, we are assigning those variables a <code>value</code>.
-And if we are working with reference types, we are assigning those variables a <code>reference</code>.</p>
-<p>We will explain the differences between those two, and on how java handles them.</p>
+If we are working with reference types, we are assigning those variables a <code>reference</code>.</p>
+<p>I will explain the differences between those two, and how java handles them.</p>
 <h2 id="arithmetic-operators"><a class="header" href="#arithmetic-operators">Arithmetic Operators</a></h2>
 <p>These are <strong>five</strong> arithmetic operators available:</p>
 <ul>
@@ -265,14 +265,14 @@ And if we are working with reference types, we are assigning those variables a <
 <li><code>%</code>, modulo (remainder)</li>
 </ul>
 <p>Those can be only used while working with primitive types.
-The only exception is a <strong>string concatenation</strong>, where we want to put two sequence of characters (string literals) together. The java compiler then uses a class in the JDK called <strong>StringBuilder</strong> and concatenate those strings together.</p>
+The only exception is a <strong>string concatenation</strong>, where we want to put two sequence of characters (string literals) together. The java compiler then uses a class in the JDK called <strong>StringBuilder</strong> and concatenates those strings together.</p>
 <p>An example usage of those operators:</p>
 <pre><code class="language-java">int foo = 1;
 int bar = 2;
 
 int result = foo + bar;
 </code></pre>
-<p>Also we don't have to declare a those variables called <code>foo</code>, <code>bar</code>.
+<p>Also we don't have to declare a those variables called <code>foo</code>, <code>bar</code>:
 It can also be written like this</p>
 <pre><code class="language-java">int result = 1 + 2;
 </code></pre>
@@ -281,13 +281,13 @@ It can also be written like this</p>
 <h2 id="unary-operators"><a class="header" href="#unary-operators">Unary Operators</a></h2>
 <p>Unary Operators are arithmetic operators that only use 1 variable as input data. Here are <strong>5</strong> unary operators:</p>
 <ul>
-<li><code>+</code> gives a value (or a variable) a positive value </li>
-<li><code>-</code> gives a value (or a variable) a negative value</li>
-<li><code>++</code> an addition operator that increases a variable value by 1. Can only be performed on variables, and there are two ways of using this operator, we will discuss them.</li>
-<li><code>--</code> a subtraction operator that decreases a variable value by 1. can only be performed on variables, just like the <code>++</code> operator.</li>
-<li><code>!</code> inverts the value of a boolean (we will see an example of that)</li>
+<li><code>+</code>: gives a value (or a variable) a positive value </li>
+<li><code>-</code>: gives a value (or a variable) a negative value</li>
+<li><code>++</code>: an addition operator that increases a variable value by 1. Can only be performed on variables, and there are just two ways of using this operator.</li>
+<li><code>--</code>: a subtraction operator that decreases a variable value by 1. Can only be performed on variables, just like the <code>++</code> operator.</li>
+<li><code>!</code>: inverts the value of a boolean (we will see an example of that)</li>
 </ul>
-<p><em>The</em> <code>+</code><em>,</em> <code>-</code> <em>operators are simply used in value assignment to either give a variable a positive/negative value.</em></p>
+<p><em>The</em> <code>+</code> <em>and</em> <code>-</code> <em>operators are simply used in value assignment to either give a variable a positive/negative value.</em></p>
 <p>Behold this code:</p>
 <pre><code class="language-java">int foo = -10;
 //foo is now -10
@@ -306,21 +306,21 @@ int result = ++foo;
 </code></pre>
 <p>To explain the process, first, the variable <code>foo</code> is incremented by one and then assigned to the variable result, so both <code>foo</code> and <code>result</code> will be <code>11</code> here.</p>
 <p>Now, the last operator, the boolean invert operator is very simple.
-It can only be used on boolean values <code>true</code>, <code>false</code> and all it's self explanatory.
+It can only be used on boolean values: <code>true</code> and <code>false</code>.
 An example of that is:</p>
 <pre><code class="language-java">boolean foo = true;
 boolean bar = !foo;
 </code></pre>
-<p>Now, the value of <code>foo</code> will remain <code>true</code>, as the operator doesn't change the value of the original variable (it's not an assignment, so it differs from the last two operators), and the variable <code>bar</code> will have the value <code>false</code>, because we have inverted it. This can obviously be used the other way around aswell (if we start with <code>false</code>).</p>
+<p>Now, the value of <code>foo</code> will remain <code>true</code>, as the operator doesn't change the value of the original variable (it's not an assignment, so it differs from the last two operators), and the variable <code>bar</code> will have the value <code>false</code>, because we have inverted it. This can obviously be used the other way around as well, if we start with <code>false</code>.</p>
 <h2 id="boolean-operators"><a class="header" href="#boolean-operators">Boolean Operators</a></h2>
 <p>Here I will discuss <strong>10</strong> different boolean operators:</p>
 <ul>
-<li><code>==</code>, compares a value when used on primitive types and a reference when used on reference types</li>
-<li><code>&gt;=</code>, is greater than or equal </li>
-<li><code>&lt;=</code>, is less than or equal </li>
-<li><code>&gt;</code>, is greater than </li>
-<li><code>&lt;</code>, is less than</li>
-<li><code>!=</code>, an inverted <code>==</code> operator (is not equal to)</li>
+<li><code>==</code>, compares a value when used on primitive types and a reference when used on reference types.</li>
+<li><code>&gt;=</code>, is greater than or equal.</li>
+<li><code>&lt;=</code>, is less than or equal.</li>
+<li><code>&gt;</code>, is greater than.</li>
+<li><code>&lt;</code>, is less than.</li>
+<li><code>!=</code>, an inverted <code>==</code> operator (is not equal to).</li>
 <li><code>&amp;&amp;</code>, boolean <em>AND</em>, used to combine many boolean expressions together and check if they <strong>all</strong> return true and returns a boolean value (<code>true</code>, <code>false</code>) depending on that.</li>
 <li><code>||</code>, boolean <em>OR</em>, used to combine many boolean expressions together and check if <strong>at least one</strong> of them is true and returns a boolean value (<code>true</code>, <code>false</code>) depending on that.</li>
 <li><code>instanceof</code>, used for checking if an <strong>object</strong> is an instance of a particular class or it's subtype.</li>
@@ -341,7 +341,7 @@ However, this expression:</p>
 <pre><code class="language-java">boolean foo = 1 &lt; 2 &amp;&amp; 2 &lt; 1;
 </code></pre>
 <p>Would hold the value <code>false</code>, because the second expression returned <code>false</code>.</p>
-<p>Now, boolean expressions can be used in many places where a boolean is needed. For example an <code>if</code> statement (we will go through those as well).</p>
+<p>Now, boolean expressions can be used in many places where a boolean is needed. For example, an <code>if</code> statement (we will go through those as well).</p>
 <pre><code class="language-java">int foo = 5;
 int bar = 10;
 
@@ -350,7 +350,7 @@ if (bar &gt; foo) {
 }
 </code></pre>
 <p>As for understanding the <code>instanceof</code> operator, you may have to go through the <strong>object oriented programming</strong> section.
-However, here is an example:</p>
+Here is an example:</p>
 <pre><code class="language-java">Object object = new Boolean(Boolean.TRUE);
 boolean foo = object instanceof Boolean;
 </code></pre>
@@ -381,14 +381,14 @@ if (10 &gt; 5) {
 <li><code>^</code>, exclusive bit <strong>OR</strong>.</li>
 </ul>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
-<p>A variable is a labeled container that can contain a single value of it's type.</p>
+<p>A variable is a labelled container that can contain a single value of its type.</p>
 <p>Variables consist of:</p>
 <ol>
 <li>Type</li>
 <li>Label</li>
 <li>Value</li>
 </ol>
-<p>We've discussed the syntax of variables in the previous sections.</p>
+<p>We've discussed the syntax of variables in the previous sections:</p>
 <pre><code class="language-java">int foo = 1;
 </code></pre>
 <ul>
@@ -405,7 +405,7 @@ if (10 &gt; 5) {
 <li>Parameter Variable</li>
 </ul>
 <h2 id="instance-variables"><a class="header" href="#instance-variables">Instance Variables</a></h2>
-<p>Instance variables (fields) are variables that belong to an instance of a particular class. For example, behold a class <code>Car</code>.</p>
+<p>Instance variables (fields) are variables that belong to an instance of a particular class. For example, behold a class <code>Car</code>:</p>
 <pre><code class="language-java">class Car {
   float speed;
   String make;
@@ -422,7 +422,7 @@ That means we can do:</p>
 car.speed = 1f;
 car.make = &quot;Ford&quot;;
 </code></pre>
-<p>Instance variables just mean that they belong to an <strong>instance of a class</strong> (also known as an object, not to be confused with the class <code>Object</code>), they don't represent a global state and are completely instance dependent. We will discuss instances and classes later.</p>
+<p>Instance variables just mean that they belong to an <strong>instance of a class</strong> (also known as an object, not to be confused with the class <code>Object</code>); they don't represent a global state and are completely instance dependent. We will discuss instances and classes later.</p>
 <h2 id="class-variables"><a class="header" href="#class-variables">Class Variables</a></h2>
 <p>Class variables, are those which are declared with the <code>static</code> modifier and belong to the class rather than to an instance of the class (object).
 A class variable is loaded on a load of a class (since it belongs to the class) instead of an instantiation of a class. Since it represents a global state, it's value will be the same across all instances or static contexts.</p>
@@ -443,7 +443,7 @@ A class variable is loaded on a load of a class (since it belongs to the class) 
 }
 </code></pre>
 <p>Within the scope of the <code>drive</code> method, we can access all instance variables such as the variable <code>speed</code>.
-If we would create a <strong>local variable</strong> inside the method <code>drive</code>, it would be only accessible in the scope of the method, not outside the method.</p>
+If we would create a <strong>local variable</strong> inside the method <code>drive</code>, it would only be accessible in the scope of the method, not outside the method:</p>
 <pre><code class="language-java">class Car {
   float speed;
   String make;
@@ -460,7 +460,7 @@ If we would create a <strong>local variable</strong> inside the method <code>dri
 }
 </code></pre>
 <h2 id="parameter-variables"><a class="header" href="#parameter-variables">Parameter Variables</a></h2>
-<p>Parameters, are variables that are passed into <strong>functions</strong>. Functions include a <strong>constructor</strong> and a <strong>method</strong>.
+<p>Parameters are variables that are passed into <strong>functions</strong>. Functions include a <strong>constructor</strong> and a <strong>method</strong>.
 Let's modify our last example:</p>
 <pre><code class="language-java">class Car {
   float speed;
@@ -475,25 +475,25 @@ Let's modify our last example:</p>
   }
 }
 </code></pre>
-<p>One important thing to remember is that, <strong>primitive types are pass-by-value</strong> and <strong>reference types are pass-by-reference</strong>.
-This means that if we create an instance of our class <code>Car</code> and call the <code>drive</code> method, we need to pass in a  parameter (a <code>float</code>).</p>
+<p>One important thing to remember is that <strong>primitive types</strong> are <strong>pass-by-value</strong> and <strong>reference types</strong> are <strong>pass-by-reference</strong>.
+This means that if we create an instance of our class <code>Car</code> and call the <code>drive</code> method, we need to pass in a  parameter (a <code>float</code>):</p>
 <pre><code class="language-java">Car car = new Car();
 car.drive(2f);
 </code></pre>
-<p>The value will be passed into the method and turnt into a local variable in our scope of <code>drive</code>. If we would predefine a variable called speed and then pass it into the method:</p>
+<p>The value will be passed into the method and turned into a local variable in our scope of <code>drive</code>. If we would predefine a variable called speed and then pass it into the method:</p>
 <pre><code class="language-java">Car car = new Car();
 float speed = 2f;
 
 car.drive(speed);
 </code></pre>
-<p>And then change the value inside the method <code>drive</code>, it's value would only be changed in the scope of the method we called. The original variable <code>speed</code> would still have the value <code>2f</code> no matter what.
+<p>And then change the value inside of the method <code>drive</code>, its value would only be changed in the scope of the method we called. The original variable, <code>speed</code>, would still have the value <code>2f</code> no matter what.
 This is because primitive types are pass by value, so their value gets copied into the method parameter.</p>
-<p>To finish the parameter section, reference types are pass-by-reference as we said. We are still not allowed to change the references of objects when they are passed into functions. The only difference is that there is no copy of an object made, the object that was passed into the function is still the same object. This means that we can still change the fields (mutate) the original object, however we are only not allowed to change the reference (again, only in the scope of the method).</p>
+<p>To finish the parameter section, reference types are pass-by-reference as we said. We are still not allowed to change the references of objects when they are passed into functions. The only difference is that there is no copy of an object made, as the object that was passed into the function is still the same object. This means that we can still change the fields of (mutate) the original object, however we aren't allowed to change the reference in the scope of the method.</p>
 <pre><code class="language-java">Car toyota = new Car();
 
 Car ford = new Car(toyota);
 </code></pre>
-<p>There is a new concept used, which is a <strong>constructor</strong>.</p>
+<p>There is a new concept used, which is a <strong>constructor</strong>:</p>
 <pre><code class="language-java">class Car {
   float speed;
   String make;
@@ -511,7 +511,7 @@ Car ford = new Car(toyota);
   }
 }
 </code></pre>
-<p>The instance variables (fields) of <code>toyota</code> <strong>will change</strong> to the ones we have defined in the <code>Car</code> constructor (<code>1</code>, <code>Ford</code>), but if we attempt to change the reference of the parameter <code>car</code> to for example a <code>null</code> reference, nothing will change and we will still be able to operate with our original <code>toyota</code>.</p>
+<p>The instance variables (fields) of <code>toyota</code> <strong>will change</strong> to the ones we have defined in the <code>Car</code> constructor (<code>1</code>, <code>Ford</code>), but if we attempt to change the reference of the parameter <code>car</code> to, for example, a <code>null</code> reference, nothing will change and we will still be able to operate with our original <code>toyota</code>:</p>
 <pre><code class="language-java">class Car {
   float speed;
   String make;
@@ -531,51 +531,52 @@ Car ford = new Car(toyota);
 }
 </code></pre>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="control-flow"><a class="header" href="#control-flow">Control Flow</a></h1>
-<p>Control flows allows us to iterate and make desicions inside our code.</p>
+<p>Control flow allows us to iterate and make desicions inside our code.</p>
 <h2 id="if-statements"><a class="header" href="#if-statements">If Statements</a></h2>
-<p>We will begin with if statements. The syntax is the following:</p>
+<p>We will begin with <code>if</code> statements. The syntax is the following:</p>
 <pre><code class="language-java">if (condition) {
  
 }
 </code></pre>
-<p>First, we begin with the <code>if</code> keyword, then put brackets around and a boolean expression inside the brackets. Then we add a thing called an <strong>if body</strong>, which is just two {} brackets that introduce a scope.</p>
-<p>We have used if statements before, they are quite simple.</p>
+<p>First, we begin with the <code>if</code> keyword, then put brackets around a boolean expression. Then we add something called an <strong>if body</strong>, which is just two <code>{}</code> brackets that introduce a scope.</p>
+<p>We have used <code>if</code> statements before, they are quite simple:</p>
 <pre><code class="language-java">if (true) {
   // code ran when true
 } else {
   // code ran when false
 }
 </code></pre>
-<p>With our boolean expressions, we can also apply things such as <code>||</code> or <code>&amp;&amp;</code> when needed, or possibly invert our boolean expression.</p>
+<p>With our boolean expressions, we can also apply things such as <code>||</code> or <code>&amp;&amp;</code> when needed, or possibly invert our boolean expression with an <code>!</code>.</p>
 <h2 id="for-loops"><a class="header" href="#for-loops">For Loops</a></h2>
-<p>The second control flow statement is a for loop which is a bit harder.
+<p>The second control flow statement is a <code>for</code> loop which is a bit harder.
 Syntax is the following:</p>
 <pre><code class="language-java">for (declaration; condition; operation) {
 
 }
 </code></pre>
-<p>We first declare a variable (such as an <code>int</code>), then a condition and finally an operation.</p>
-<p>The simpliest form of a for loop is:</p>
+<p>We first declare a variable (such as an <code>int</code>), then a condition, and finally an operation.</p>
+<p>The simpliest form of a <code>for</code> loop is:</p>
 <pre><code class="language-java">for (int counter = 0; counter &lt; 10; counter++) {
   // code here will run 10 times
+  // counter will range from 0 to 9, each time the code is run
 }
 </code></pre>
 <p>We first declare an <code>int</code> variable <code>counter</code> and assign it the value <code>0</code>, then we specify a condition (a boolean expression which is <code>counter &lt; 10</code> here), and then we tell the loop what to do when the condition is true. Here, we increment the variable <code>counter</code> by one.</p>
 <h2 id="while-loops"><a class="header" href="#while-loops">While Loops</a></h2>
-<p>The while loop is also a loop, but it only takes a condition (boolean expression) to run. The loop will run if the condition will be true. Once the expression will return false, the loop will automatically <strong>break</strong>. <strong>break</strong> is also a keyword, that we will discuss soon alongside with the keyword <strong>continue</strong>. Let's see this example of a while loop that will run infinitely.</p>
+<p>The <code>while</code> loop is also a loop, but it only takes a condition (boolean expression) to run. The loop will run if the condition will be true. Once the expression returns <code>false</code>, the loop will automatically <strong>break</strong>. Let's see an example of a <code>while</code> loop that will run infinitely:</p>
 <pre><code class="language-java">while (true) {
  // ..
 }
 </code></pre>
-<p>The do-while loop is essentially almost the same as the while loop and the syntax is the following:</p>
+<p>The <code>do-while</code> loop is essentially the same as the <code>while</code> loop. An example of the syntax is shown below:</p>
 <pre><code class="language-java">do {
  //code is ran once
 } while (false);
 </code></pre>
-<p>Now, the only difference here is that the code inside the scope of <code>do</code> will run <strong>at least once</strong>, even if the expression in <code>while</code> returns always <code>false</code>.</p>
+<p>Now, the only difference here is that the code inside the scope of <code>do</code> will run <strong>at least once</strong>, even if the expression in <code>while</code> always returns <code>false</code>.</p>
 <h2 id="switch-statements"><a class="header" href="#switch-statements">Switch Statements</a></h2>
-<p>Switch is a way how to chain more if statements with the option of breaking. Switch consists of cases and a default (optional).
-See this example:</p>
+<p>Switch is a way how to chain more <code>if</code> statements with the option of breaking. Switch consists of cases and a default (optional).
+Behold the code below:</p>
 <pre><code class="language-java">int foo = 1;
 switch (foo) {
   case 1: {
@@ -587,8 +588,8 @@ switch (foo) {
 }
 </code></pre>
 <p>As you can see, if switch meets the correct case, it will keep going through all the other cases below it until it meets a <code>break</code>. 
-We can also add a default to the switch to run some code if none of the cases is the value specified.</p>
-<p>Note that we can only use enumerations, strings and all primitives in a switch, no other <strong>objects</strong>.</p>
+We can also add a default to the switch to run some code if none of the cases are the value specified.</p>
+<p>Note that we can only use enumerations, strings, and all primitives in a switch, no other <strong>objects</strong>.</p>
 <p>I will explain why is an enumeration and a string possible in a switch later.</p>
 <pre><code class="language-java">int foo = 1;
 switch (foo) {
@@ -607,9 +608,9 @@ switch (foo) {
 }
 </code></pre>
 <h2 id="break-and-continue-keywords"><a class="header" href="#break-and-continue-keywords">Break and Continue Keywords</a></h2>
-<p>As we have seen, the <strong>break</strong> keyword can be used in a loop but also in a switch, however the <strong>continue</strong> keyword can only be used in loops.</p>
-<p>The break keyword ends execution of the control flow statement (such as a loop or a switch) and the continue keyword skips 1 iteration in the loop (but not ending it entirely)</p>
-<p>We will later discuss the keyword return and how it's similar to the keyword <strong>continue</strong>, it essentially does the same thing but <strong>continue</strong> only returns from the control flow statement, while <strong>return</strong> returns from an entire function.</p>
+<p>As we have seen, the <strong>break</strong> keyword can be used in a loop and in a <code>switch</code>. However the <strong>continue</strong> keyword can only be used in loops.</p>
+<p>The break keyword ends execution of the control flow statement (such as a loop or a switch) and the continue keyword skips 1 iteration in the loop (but not ending it entirely).</p>
+<p>We will later discuss the keyword <code>return</code> and how it's similar to the keyword <strong>continue</strong>: it essentially does the same thing but <strong>continue</strong> only returns from the control flow statement, while <strong>return</strong> returns from an entire function.</p>
 <pre><code class="language-java">int foo = 0;
 while (foo &lt; 10) {
   if (foo &lt;= 5) {
@@ -621,8 +622,8 @@ while (foo &lt; 10) {
   // do extra work here
 }
 </code></pre>
-<p>Now, code here will only increment <code>foo</code> by one 6 times and by saying <code>continue</code>, we skip the current execution (iteration) of the control flow statement, so anything after the first if statement doesn't get executed.
-If we would use a <strong>break</strong> however, the entire execution of the loop would be terminated.</p>
+<p>Now, code here will only increment <code>foo</code> by one, 6 times. By calling the <code>continue</code> keyword, we skip the current execution (iteration) of the control flow statement. Anything after the first <code>if</code> statement doesn't get executed.
+If we would use a <strong>break</strong> however, the entire execution of the loop would be terminated:</p>
 <pre><code class="language-java">int foo = 0;
 while (foo &lt; 10) {
   if (foo &lt;= 5) {
@@ -635,7 +636,7 @@ while (foo &lt; 10) {
 }
 </code></pre>
 <h2 id="chaining-if-statements"><a class="header" href="#chaining-if-statements">Chaining If Statements</a></h2>
-<p>In addition to if statements, we can write multiple if statements like this:</p>
+<p>In addition to <code>if</code> statements, we can write multiple <code>if</code> statements like this:</p>
 <pre><code class="language-java">if (condition) {
  // ..
 } else if (condition) {
@@ -646,8 +647,8 @@ while (foo &lt; 10) {
  // ..
 }
 </code></pre>
-<p>Which would run any of the if statements if their condition would be true, but note that the difference between writing them as separate statements is that if one of the if statements is true, the statements after it don't get executed anymore, kinda like a switch with a break in every case.</p>
-<p>If none of those conditions would be true however, the <code>else</code> statement would run.</p>
+<p>Which would run any of the <code>if</code> statements if their conditions are true, but note that the difference between writing them as separate statements is that if one of the if statements is true, the statements after it don't get executed anymore, similar to a switch with a break in every case.</p>
+<p>If none of those conditions return <code>true</code>, the <code>else</code> statement would run.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="classes"><a class="header" href="#classes">Classes</a></h1>
 <p>What is a class? Well, a class is essentially a template which contains <strong>members</strong>. We can use this template to create <strong>objects</strong> (instances of that class) as we have with the <code>Car</code> example before.</p>
 <p>Members include:</p>
