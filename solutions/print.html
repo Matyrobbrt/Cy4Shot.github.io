@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Solutions</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Solutions</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="solutions"><a class="header" href="#solutions">Solutions</a></h1>
+<p>This page is set up for common solutions to problems when creating mods for 1.16 forge using my tutorial series! Check the menu on the left for more information.</p>
+<p><a href="https://cy4shot.github.io">Return Home.</a></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="wrong-java-version"><a class="header" href="#wrong-java-version">Wrong Java Version</a></h1>
+<p>When starting the game, you may see that it tries to start the game with <strong>Java 15/16</strong>, even though <strong>Java 8</strong> is installed.  To fix this, we need to edit some project settings.</p>
+<h2 id="1-locating-installed-jres"><a class="header" href="#1-locating-installed-jres">1. Locating installed JREs</a></h2>
+<p>Right click on your project, and click on <code>Properties</code>.  Next, go down to <code>Java Build Path</code>, and in the properties window, select the <code>Libraries</code> tab.  Click <code>JRE System Library</code> and then click <code>Edit</code> on the left.  Finally, click <code>Installed JREs</code>.</p>
+<h2 id="2-changing-build-path"><a class="header" href="#2-changing-build-path">2. Changing build path</a></h2>
+<p>Now, click <code>Add</code>, select <code>Standard VM</code> and hit <code>Next</code>.  Next, click <code>Directory</code> and locate the installation path of the Java 8 JRE.  If you have downloaded OpenJDK as I have done in my video tutorials, you will find the path under <code>C:\Program Files\AdoptOpenJDK\jdk-8.0.282.8-hotspot\jre</code>.  Once you have done that, click <code>Finish</code>.  Then, tick the box thats next to the Java 8 JRE, and click <code>Apply and Close</code>.  Click <code>Alternate JRE</code>, and select the Java 8 JDK from the dropdown.  Finally, click <code>Finish</code> and then <code>Apply and Close</code>.</p>
+<h2 id="3-refresh-gradle"><a class="header" href="#3-refresh-gradle">3. Refresh gradle</a></h2>
+<p>To rebuild gradle, right click on your project and go to <code>Gradle &gt; Refresh Gradle Project</code>, and wait for the progress bar in the bottom right to finish.</p>
+<p>Thats it!  Good luck with modding :D  </p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="mappings"><a class="header" href="#mappings">Mappings</a></h1>
+<p>Mappings are basically what defines a functions name. By default, in 1.16.5, forge uses <strong>Mojmaps</strong>, but my tutorials use <strong>MCP</strong>. <strong>MCP</strong> have less functions mapped, but they usually have more user friendly descriptions.</p>
+<h2 id="1-changing-mappings"><a class="header" href="#1-changing-mappings">1. Changing mappings</a></h2>
+<p>If you would like to change, simple do the following steps:
++ Go to your mod's folder and open CMD.
++ Type <code>gradlew -PUPDATE_MAPPINGS=20201028-1.16.3 -PUPDATE_MAPPINGS_CHANNEL=snapshot updateMappings</code> and wait for the process to finish.
++ Locate your <code>build.gradle</code> file in your project.
++ Open the file and find <code>&lt;mappings channel: 'official', version: '1.16.5'&gt;</code>.
++ Replace it with <code>&lt;mappings channel: 'snapshot', version: '20201028-1.16.3'&gt;</code>.
++ Save the file.
++ Right click on your project and go to <code>gradle&gt;refresh</code>.
++ Wait for the refresh to complete.</p>
+<h2 id="2-using-mojmaps"><a class="header" href="#2-using-mojmaps">2. Using Mojmaps</a></h2>
+<p>Alternatively, you can use the bot in <code>#bot-commands</code> in our <a href="https://discord.gg/x9Mj63m4QG">discord</a>. Simply type <code>!mcpmm &lt;name_of_function&gt; 1.16</code> in order to convert from the <strong>MCP</strong> used in my tutorials to the <strong>Mojmaps</strong> used by 1.16.5.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
