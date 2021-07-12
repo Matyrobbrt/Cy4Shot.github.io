@@ -3,10 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
+        <title>Mappings - Solutions</title>
         
-        
-        <base href="/">
         
 
 
@@ -97,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html" class="active"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,15 +165,35 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>The specified page could not be found.</p>
-<p><a href="https://cy4shot.github.io">Return home</a> or use the menu on the left.</p>
+                        <h1 id="mappings"><a class="header" href="#mappings">Mappings</a></h1>
+<p>Mappings are basically what defines a functions name. By default, in 1.16.5, forge uses <strong>Mojmaps</strong>, but my tutorials use <strong>MCP</strong>. <strong>MCP</strong> have less functions mapped, but they usually have more user friendly descriptions.</p>
+<h2 id="1-changing-mappings"><a class="header" href="#1-changing-mappings">1. Changing mappings</a></h2>
+<p>If you would like to change, simple do the following steps:
++ Go to your mod's folder and open CMD.
++ Type <code>gradlew -PUPDATE_MAPPINGS=20201028-1.16.3 -PUPDATE_MAPPINGS_CHANNEL=snapshot updateMappings</code> and wait for the process to finish.
++ Locate your <code>build.gradle</code> file in your project.
++ Open the file and find <code>&lt;mappings channel: 'official', version: '1.16.5'&gt;</code>.
++ Replace it with <code>&lt;mappings channel: 'snapshot', version: '20201028-1.16.3'&gt;</code>.
++ Save the file.
++ Right click on your project and go to <code>gradle&gt;refresh</code>.
++ Wait for the refresh to complete.</p>
+<h2 id="2-using-mojmaps"><a class="header" href="#2-using-mojmaps">2. Using Mojmaps</a></h2>
+<p>Alternatively, you can use the bot in <code>#bot-commands</code> in our <a href="https://discord.gg/x9Mj63m4QG">discord</a>. Simply type <code>!mcpmm &lt;name_of_function&gt; 1.16</code> in order to convert from the <strong>MCP</strong> used in my tutorials to the <strong>Mojmaps</strong> used by 1.16.5.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="javaversion.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
+                        
+                            <a rel="next" href="export.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -185,7 +203,15 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a rel="prev" href="javaversion.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
+                
+                    <a rel="next" href="export.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 

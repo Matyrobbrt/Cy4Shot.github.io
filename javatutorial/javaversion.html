@@ -3,10 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
+        <title>Wrong Java Version - Solutions</title>
         
-        
-        <base href="/">
         
 
 
@@ -97,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html" class="active"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,15 +165,30 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>The specified page could not be found.</p>
-<p><a href="https://cy4shot.github.io">Return home</a> or use the menu on the left.</p>
+                        <h1 id="wrong-java-version"><a class="header" href="#wrong-java-version">Wrong Java Version</a></h1>
+<p>When starting the game, you may see that it tries to start the game with <strong>Java 15/16</strong>, even though <strong>Java 8</strong> is installed.  To fix this, we need to edit some project settings.</p>
+<h2 id="1-locating-installed-jres"><a class="header" href="#1-locating-installed-jres">1. Locating installed JREs</a></h2>
+<p>Right click on your project, and click on <code>Properties</code>.  Next, go down to <code>Java Build Path</code>, and in the properties window, select the <code>Libraries</code> tab.  Click <code>JRE System Library</code> and then click <code>Edit</code> on the left.  Finally, click <code>Installed JREs</code>.</p>
+<h2 id="2-changing-build-path"><a class="header" href="#2-changing-build-path">2. Changing build path</a></h2>
+<p>Now, click <code>Add</code>, select <code>Standard VM</code> and hit <code>Next</code>.  Next, click <code>Directory</code> and locate the installation path of the Java 8 JRE.  If you have downloaded OpenJDK as I have done in my video tutorials, you will find the path under <code>C:\Program Files\AdoptOpenJDK\jdk-8.0.282.8-hotspot\jre</code>.  Once you have done that, click <code>Finish</code>.  Then, tick the box thats next to the Java 8 JRE, and click <code>Apply and Close</code>.  Click <code>Alternate JRE</code>, and select the Java 8 JDK from the dropdown.  Finally, click <code>Finish</code> and then <code>Apply and Close</code>.</p>
+<h2 id="3-refresh-gradle"><a class="header" href="#3-refresh-gradle">3. Refresh gradle</a></h2>
+<p>To rebuild gradle, right click on your project and go to <code>Gradle &gt; Refresh Gradle Project</code>, and wait for the progress bar in the bottom right to finish.</p>
+<p>Thats it!  Good luck with modding :D  </p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="solutions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
+                        
+                            <a rel="next" href="mappings.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -185,7 +198,15 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a rel="prev" href="solutions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
+                
+                    <a rel="next" href="mappings.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 
