@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Solutions - Solutions</title>
+        <title>Fuel Item - Solutions</title>
         
         
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html" class="active">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li><li class="chapter-item expanded "><a href="foods.html"><strong aria-hidden="true">4.</strong> Food Item</a></li><li class="chapter-item expanded "><a href="fuels.html"><strong aria-hidden="true">5.</strong> Fuel Item</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li><li class="chapter-item expanded "><a href="foods.html"><strong aria-hidden="true">4.</strong> Food Item</a></li><li class="chapter-item expanded "><a href="fuels.html" class="active"><strong aria-hidden="true">5.</strong> Fuel Item</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -165,20 +165,45 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="solutions"><a class="header" href="#solutions">Solutions</a></h1>
-<p>This page is set up for common solutions to problems when creating mods for 1.16 forge using my tutorial series! Check the menu on the left for more information.</p>
-<p><a href="https://cy4shot.github.io">Return Home.</a></p>
+                        <h1 id="how-to-make-a-fuel-item"><a class="header" href="#how-to-make-a-fuel-item">How to make a Fuel Item</a></h1>
+<h2 id="1-item-class"><a class="header" href="#1-item-class">1. Item Class</a></h2>
+<p>First, lets create the class for an item! Lets start by creating a simple class (usually in <code>common.items</code>) that extends <code>Item</code>:</p>
+<pre><code class="language-java">class ExampleFuelItem extends Item {
+	public ExampleFuelItem (final Item.Properties properties) {
+		super(properties);
+	}
+}
+</code></pre>
+<p>Then, lets override <code>getBurnTime</code>. This is a forge method, so its the same for any mappings!</p>
+<pre><code class="language-java">class ExampleFuelItem extends Item {
+	public ExampleFuelItem (final Item.Properties properties) {
+		super(properties);
+	}
+
+	@Override
+	public int getBurnTime(ItemStack itemStack) {
+		return 14400; // The length of burning in ticks!
+	}
+}
+</code></pre>
+<p>Once we've returned the correct value, we can close and save the class!</p>
+<h2 id="2-registering-the-item"><a class="header" href="#2-registering-the-item">2. Registering the Item</a></h2>
+<p>Next, lets go in our <code>ItemInit</code> and register the item like we would any other!</p>
+<pre><code class="language-java">public static final RegistryObject&lt;ExampleFuelItem&gt; EXAMPLE_FUEL = ITEMS.register(&quot;example_fuel&quot;,
+	() -&gt; new ExampleFuelItem(new Item.Properties().group(TutorialModItemGroup.TUTORIAL_MOD)));
+</code></pre>
+<p>And that's it! We've created a custom fuel.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-
-                        
-                            <a rel="next" href="javaversion.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
+                            <a rel="prev" href="foods.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
                             </a>
+                        
+
                         
 
                         <div style="clear: both"></div>
@@ -188,11 +213,11 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-
-                
-                    <a rel="next" href="javaversion.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
+                    <a rel="prev" href="foods.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
                     </a>
+                
+
                 
             </nav>
 

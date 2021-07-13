@@ -97,7 +97,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li><li class="chapter-item expanded "><a href="foods.html"><strong aria-hidden="true">4.</strong> Food Item</a></li><li class="chapter-item expanded "><a href="fuels.html"><strong aria-hidden="true">5.</strong> Fuel Item</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -194,8 +194,64 @@
 <h2 id="2-using-mojmaps"><a class="header" href="#2-using-mojmaps">2. Using Mojmaps</a></h2>
 <p>Alternatively, you can use the bot in <code>#bot-commands</code> in our <a href="https://discord.gg/x9Mj63m4QG">discord</a>. Simply type <code>!mcpmm &lt;name_of_function&gt; 1.16</code> in order to convert from the <strong>MCP</strong> used in my tutorials to the <strong>Mojmaps</strong> used by 1.16.5.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="exporting"><a class="header" href="#exporting">Exporting</a></h1>
-<p>In this guice I will be showing you how to export your mod so you can let other people play it.  Let's begin!</p>
+<p>In this guide I will be showing you how to export your mod so you can let other people play it.  Let's begin!</p>
 <p>Go to your mods folder and open CMD. Type <code>gradlew build</code> and wait for the process to finish. Your <code>.jar</code> file will be located in the <code>build/libs</code> folder. That's it! Make sure to test your mod before exporting and upload the jar onto CurseForge once you are done!</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="how-to-make-a-food-item"><a class="header" href="#how-to-make-a-food-item">How to make a Food item</a></h1>
+<h2 id="1-basic-food"><a class="header" href="#1-basic-food">1. Basic Food</a></h2>
+<p>In order to make a food, we need to add a <strong>Food Builder</strong> to our Item Properties! So, in our <code>ItemInit</code>, where we initialize our item, lets add a basic item:</p>
+<pre><code class="language-java">public static final RegistryObject&lt;Item&gt; EXAMPLE_FOOD ITEMS.register(&quot;example_food&quot;,
+	() -&gt; new Item(new Item.Properties().group(TutorialModItemGroup.TUTORIAL_MOD)));
+</code></pre>
+<p>Now, lets add a food builder to this item:</p>
+<pre><code class="language-java">public static final RegistryObject&lt;Item&gt; EXAMPLE_FOOD ITEMS.register(&quot;example_food&quot;,
+	() -&gt; new Item(new Item.Properties().group(TutorialModItemGroup.TUTORIAL_MOD)
+		.food(new Food.Builder()
+		.hunger(4)
+		.saturation(1.2f)
+		.build()));
+</code></pre>
+<p>The food builder above gives the food a hunger value of <code>4</code> and a saturation value of <code>1.2</code>. You can find the default values <a href="https://minecraft.fandom.com/wiki/Hunger#Food_level_and_saturation_level_restoration">here</a>.</p>
+<h2 id="2-food-with-effects"><a class="header" href="#2-food-with-effects">2. Food with Effects</a></h2>
+<p>In order to add an effect to the food, we need to add a couple of things to the food builder:</p>
+<pre><code class="language-java">public static final RegistryObject&lt;Item&gt; EXAMPLE_FOOD ITEMS.register(&quot;example_food&quot;,
+	() -&gt; new Item(new Item.Properties().group(TutorialModItemGroup.TUTORIAL_MOD)
+		.food(new Food.Builder()
+		.hunger(4)
+		.saturation(1.2f)
+		.effect(new EffectInstance(Effects.REGENERATION, 200, 0), 1f)
+		.build()));
+</code></pre>
+<p>Lets break that down. <code>effect</code> takes two parameters, an <code>EffectInstance</code> and a <code>float</code>. The float value at the end, in this case <code>1f</code>, is the probability that this effect will be given.
+The effect instance contains 3 values, the effect, in this case <code>Effects.REGENERATION</code>, the time in ticks it will last in this case <code>200</code> and the effect's strength (0 - 254).
+<em>Note that in this case, 0 will give a strength of 1, 1 will give a strength of 2 ect...</em></p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="how-to-make-a-fuel-item"><a class="header" href="#how-to-make-a-fuel-item">How to make a Fuel Item</a></h1>
+<h2 id="1-item-class"><a class="header" href="#1-item-class">1. Item Class</a></h2>
+<p>First, lets create the class for an item! Lets start by creating a simple class (usually in <code>common.items</code>) that extends <code>Item</code>:</p>
+<pre><code class="language-java">class ExampleFuelItem extends Item {
+	public ExampleFuelItem (final Item.Properties properties) {
+		super(properties);
+	}
+}
+</code></pre>
+<p>Then, lets override <code>getBurnTime</code>. This is a forge method, so its the same for any mappings!</p>
+<pre><code class="language-java">class ExampleFuelItem extends Item {
+	public ExampleFuelItem (final Item.Properties properties) {
+		super(properties);
+	}
+
+	@Override
+	public int getBurnTime(ItemStack itemStack) {
+		return 14400; // The length of burning in ticks!
+	}
+}
+</code></pre>
+<p>Once we've returned the correct value, we can close and save the class!</p>
+<h2 id="2-registering-the-item"><a class="header" href="#2-registering-the-item">2. Registering the Item</a></h2>
+<p>Next, lets go in our <code>ItemInit</code> and register the item like we would any other!</p>
+<pre><code class="language-java">public static final RegistryObject&lt;ExampleFuelItem&gt; EXAMPLE_FUEL = ITEMS.register(&quot;example_fuel&quot;,
+	() -&gt; new ExampleFuelItem(new Item.Properties().group(TutorialModItemGroup.TUTORIAL_MOD)));
+</code></pre>
+<p>And that's it! We've created a custom fuel.</p>
 
                     </main>
 
@@ -218,21 +274,6 @@
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         
