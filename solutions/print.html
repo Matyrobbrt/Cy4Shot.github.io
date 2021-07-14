@@ -97,7 +97,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li><li class="chapter-item expanded "><a href="foods.html"><strong aria-hidden="true">4.</strong> Food Item</a></li><li class="chapter-item expanded "><a href="fuels.html"><strong aria-hidden="true">5.</strong> Fuel Item</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li><li class="chapter-item expanded "><a href="foods.html"><strong aria-hidden="true">4.</strong> Food Item</a></li><li class="chapter-item expanded "><a href="fuels.html"><strong aria-hidden="true">5.</strong> Fuel Item</a></li><li class="chapter-item expanded "><a href="blit.html"><strong aria-hidden="true">6.</strong> Blit Method</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -252,6 +252,27 @@ The effect instance contains 3 values, the effect, in this case <code>Effects.RE
 	() -&gt; new ExampleFuelItem(new Item.Properties().group(TutorialModItemGroup.TUTORIAL_MOD)));
 </code></pre>
 <p>And that's it! We've created a custom fuel.</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="how-to-use-the-blit-method"><a class="header" href="#how-to-use-the-blit-method">How To Use The Blit Method</a></h1>
+<p>So many people get confused when rendering the gui in a <code>Screen</code> class via <code>blit()</code> method. Here is the explanation of the parameters (I mapped all the params so you can easily understand):</p>
+<p><em>IMPORTANT: Your png gui file haas to be 256x256 square and you dont need to use all of the pixels.</em></p>
+<pre><code class="language-java">blit(MatrixStack matrixStack, int leftPos, int topPos, int x, int y, int xSize, int ySize)
+</code></pre>
+<ul>
+<li>
+<p><code>matrixStack</code> - just pass the <code>MatrixStack</code> value from <code>renderBg()</code>.</p>
+</li>
+<li>
+<p><code>leftPos</code> and <code>topPos</code> : position (x, y) where the screen png texture file is being renderered on the game screen. Using the default value for <code>leftPos</code> and <code>topPos</code> in super class is recommended.</p>
+</li>
+<li>
+<p><code>x</code> , <code>y</code> : the position in your gui texture from which it will start to render (the top, left corner). Count from the very top left of the png file (it's 0, 0).</p>
+</li>
+<li>
+<p><code>xSize</code> and <code>ySize</code>: The size of your png texture. If you will start drawing at <code>5, 5</code> and your sizes were <code>50, 50</code> it will draw from <code>5, 5</code> to <code>55, 55</code>.</p>
+</li>
+</ul>
+<p><strong>REMEMBER : Param names doesn't affect to your code outside this method, they are just useable inside this method.</strong></p>
+<p><em>~ Tutorial by KhanhPham#6192</em></p>
 
                     </main>
 
