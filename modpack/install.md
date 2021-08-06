@@ -1,6 +1,3 @@
-## Download the pack
-Download the latest pack [here](https://raw.githubusercontent.com/Cy4Shot/Cy4Shot.github.io/main/modpack/Cy4Pack-1.0.zip).
-
 ## Importing the pack
 First, click the Minecraft Tab and look for the "Create a Custom Profile" button. If you look towards the top, you will see a link to instead "Import" a profile:
 <img src="https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/9120369737/original/jRWievxHNCEvr-SmnF0BZgULhs9wTiSntQ.png?1610979012">
