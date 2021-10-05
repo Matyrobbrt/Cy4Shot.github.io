@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Food Item - Solutions</title>
+        <title>New 1.17 ToolTags system</title>
         
         
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li><li class="chapter-item expanded "><a href="foods.html" class="active"><strong aria-hidden="true">4.</strong> Food Item</a></li><li class="chapter-item expanded "><a href="fuels.html"><strong aria-hidden="true">5.</strong> Fuel Item</a></li><li class="chapter-item expanded "><a href="blit.html"><strong aria-hidden="true">6.</strong> Blit Method</a></li><li class="chapter-item expanded "><a href="17-tooltags.html"><strong aria-hidden="true">7.</strong> 1.17 ToolTags</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li><li class="chapter-item expanded "><a href="foods.html"><strong aria-hidden="true">4.</strong> Food Item</a></li><li class="chapter-item expanded "><a href="fuels.html" class="active"><strong aria-hidden="true">5.</strong> Fuel Item</a></li><li class="chapter-item expanded "><a href="blit.html"><strong aria-hidden="true">6.</strong> Blit Method</a></li><li class="chapter-item expanded "><a href="17-tooltags.html"><strong aria-hidden="true">7.</strong> 1.17 ToolTags</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -165,47 +165,112 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="how-to-make-a-food-item"><a class="header" href="#how-to-make-a-food-item">How to make a Food item</a></h1>
-<h2 id="1-basic-food"><a class="header" href="#1-basic-food">1. Basic Food</a></h2>
-<p>In order to make a food, we need to add a <strong>Food Builder</strong> to our Item Properties! So, in our <code>ItemInit</code>, where we initialize our item, lets add a basic item:</p>
-<pre><code class="language-java">public static final RegistryObject&lt;Item&gt; EXAMPLE_FOOD ITEMS.register(&quot;example_food&quot;,
-	() -&gt; new Item(new Item.Properties().group(TutorialModItemGroup.TUTORIAL_MOD)));
-</code></pre>
-<p>Now, lets add a food builder to this item:</p>
-<pre><code class="language-java">public static final RegistryObject&lt;Item&gt; EXAMPLE_FOOD ITEMS.register(&quot;example_food&quot;,
-	() -&gt; new Item(new Item.Properties().group(TutorialModItemGroup.TUTORIAL_MOD)
-		.food(new Food.Builder()
-		.hunger(4)
-		.saturation(1.2f)
-		.build()));
-</code></pre>
-<p>The food builder above gives the food a hunger value of <code>4</code> and a saturation value of <code>1.2</code>. You can find the default values <a href="https://minecraft.fandom.com/wiki/Hunger#Food_level_and_saturation_level_restoration">here</a>.</p>
-<h2 id="2-food-with-effects"><a class="header" href="#2-food-with-effects">2. Food with Effects</a></h2>
-<p>In order to add an effect to the food, we need to add a couple of things to the food builder:</p>
-<pre><code class="language-java">public static final RegistryObject&lt;Item&gt; EXAMPLE_FOOD ITEMS.register(&quot;example_food&quot;,
-	() -&gt; new Item(new Item.Properties().group(TutorialModItemGroup.TUTORIAL_MOD)
-		.food(new Food.Builder()
-		.hunger(4)
-		.saturation(1.2f)
-		.effect(new EffectInstance(Effects.REGENERATION, 200, 0), 1f)
-		.build()));
-</code></pre>
-<p>Lets break that down. <code>effect</code> takes two parameters, an <code>EffectInstance</code> and a <code>float</code>. The float value at the end, in this case <code>1f</code>, is the probability that this effect will be given.
-The effect instance contains 3 values, the effect, in this case <code>Effects.REGENERATION</code>, the time in ticks it will last in this case <code>200</code> and the effect's strength (0 - 254).
-<em>Note that in this case, 0 will give a strength of 1, 1 will give a strength of 2 ect...</em></p>
+                        <h1 id="how-to-use-the-1.17-tooltags"><a class="header" href="#how-to-use-the-1.17-tooltags">How to use the new 1.17 ToolTags system</a></h1>
 
+                        <h2 id="1-introduction"><a class="header" href="#1-introduction">1. Introduction</a></h2>
+                        <p>In the latest 1.17 Forge version, the <b>harvestTool</b> and <b>harvestLevel</b> are gone.</p>
+                        <p>Why? Because Forge wanted to add the possibility of datapacks to change the ToolType of a block, and such the new tag-based tool system has been implemented.</p>
+
+                        <h2 id = "2-tooltypes"><a class = "header" href = "#2-tooltypes">2. ToolTypes</a></h2>
+                        <p>In order to add a ToolType to our block we need to add it to the corresponding tag. The vanilla ones are:</p> <br>
+                        <table id = "tooltypes-table">
+                            <tr>
+                                <th>Tool</th>
+                                <th>Tool Name</th>
+                            </tr>
+                            <tr>
+                                <td>ToolType.AXE</td>
+                                <td>axe</td>
+                            </tr>
+                            <tr>
+                                <td>ToolType.PICKAXE</td>
+                                <td>pickaxe</td>
+                            </tr>
+                            <tr>
+                                <td>ToolType.SHOVEL</td>
+                                <td>shovel</td>
+                            </tr>
+                            <tr>
+                                <td>ToolType.HOE</td>
+                                <td>hoe</td>
+                            </tr>
+                        </table>
+
+                        <p>Now to add the block to the respective tag we make a json file called <i>toolName.json</i> (check the list <a href ="#tooltypes-table">above</a>; if we want the tool to be a pickaxe we would name it <code>pickaxe.json</code>) in <b>data/minecraft/tags/blocks/mineable</b>. In that file we will add:</p>
+                        <pre><code language = "language-json">
+{
+    "replace": false,
+    "values": [
+        "modid:block1",
+        "modid:block2" // And so on; one entry for each block you want to add to that tag
+    ]
+}
+                        </code></pre>
+
+                        <h2 id = "3-harvestlevels"><a class = "header" href = "#3-harvestlevels">3. HarvestLevels</a></h2>
+                        <p>Harvest levels are a tools' tier. (if your block should only drop loot with the correct tool and tier, then you'll need to make sure the block has the requiresToolForDrops() property set) The vanilla ones are:</p>
+                        <table id = "harvestlevels-table">
+                            <tr>
+                                <th>Tier</th>
+                                <th>Mod</th>
+                                <th>Name</th>
+                            </tr>
+                            <tr>
+                                <td>Wood (0)</td>
+                                <td>forge</td>
+                                <td>needs_wood_tool</td>
+                            </tr>
+                            <tr>
+                                <td>Gold (0)</td>
+                                <td>forge</td>
+                                <td>needs_gold_tool</td>
+                            </tr>
+                            <tr>
+                                <td>Stone (1)</td>
+                                <td>minecraft</td>
+                                <td>needs_stone_tool</td>
+                            </tr>
+                            <tr>
+                                <td>Iron (2)</td>
+                                <td>minecraft</td>
+                                <td>needs_iron_tool</td>
+                            </tr>
+                            <tr>
+                                <td>Diamond (3)</td>
+                                <td>minecraft</td>
+                                <td>needs_diamond_tool</td>
+                            </tr>
+                            <tr>
+                                <td>Netherite (4)</td>
+                                <td>forge</td>
+                                <td>needs_netherite_tool</td>
+                            </tr>
+                        </table>
+
+                        <p>Now to add the block to the respective tag we make a json file called <i>harvestLevelName.json</i> (check the list <a href ="#harvestlevels-table">above</a>; if we want the harvest level to be netherite we would name it <code>needs_netherite_tool.json</code>) in <b>data/mod/tags/blocks </b>(where <code>mod</code> is the mod which adds the harvest level. e.g. netherite harvest level is added by forge, while iron is added by minecraft ). In that file we will add:</p>
+                        <pre><code language = "language-json">
+{
+    "replace": false,
+    "values": [
+        "modid:block1",
+        "modid:block2" // And so on; one entry for each block you want to add to that tag
+    ]
+}
+                        </code></pre>
+
+                        <p><em>~ Tutorial by matyrobbrt#1756</em></p>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="export.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="blit.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="fuels.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="javaversion.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -217,13 +282,13 @@ The effect instance contains 3 values, the effect, in this case <code>Effects.RE
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="export.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="blit.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="fuels.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="javaversion.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
