@@ -44,9 +44,9 @@
         <!-- Custom theme stylesheets -->
         
 
-        
+        <script src="_templates/sidebar.js"></script>
     </head>
-    <body>
+    <body onLoad = "loadSidebar(document, 'solutions-chapter');">
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
@@ -93,12 +93,9 @@
             html.classList.add("sidebar-" + sidebar);
         </script>
 
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="solutions.html" class="active">Solutions</a></li><li class="chapter-item expanded "><a href="javaversion.html"><strong aria-hidden="true">1.</strong> Wrong Java Version</a></li><li class="chapter-item expanded "><a href="mappings.html"><strong aria-hidden="true">2.</strong> Mappings</a></li><li class="chapter-item expanded "><a href="export.html"><strong aria-hidden="true">3.</strong> Exporting</a></li><li class="chapter-item expanded "><a href="foods.html"><strong aria-hidden="true">4.</strong> Food Item</a></li><li class="chapter-item expanded "><a href="fuels.html"><strong aria-hidden="true">5.</strong> Fuel Item</a></li><li class="chapter-item expanded "><a href="blit.html"><strong aria-hidden="true">6.</strong> Blit Method</a></li><li class="chapter-item expanded "><a href="17-tooltags.html"><strong aria-hidden="true">7.</strong> 1.17 ToolTags</a></li></ol>
-            </div>
+        <div id = "sidebar">
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
-        </nav>
+        </div>
 
         <div id="page-wrapper" class="page-wrapper">
 
