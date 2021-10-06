@@ -1,6 +1,6 @@
 /**
  * Call this function on the body onLoad event. This function will add the sidebar to the document. (There has to be a div with the id of 'sidebar' in the document)
- * @param {Document} document 
+ * @param {Document} document
  * @param {String} currentPage the id of the current page chapter button
  */
 function loadSidebar(document, currentPage) {
@@ -38,10 +38,13 @@ function loadSidebar(document, currentPage) {
             <li class="chapter-item expanded "><a href="17-tooltags.html" id="17-tooltags-chapter"><strong
                         aria-hidden="true">7.</strong>
                     1.17 ToolTags</a></li>
+            <li class="chapter-item expanded "><a href="mcmeta-animations.html" id="mcmeta-animations-chapter"><strong
+                        aria-hidden="true">8.</strong>
+                    MCMeta Animations</a></li>
         </ol>
     </div>
 
     <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
 </nav>`;
-document.getElementById(currentPage).classList.add('active');
+  document.getElementById(currentPage).classList.add("active");
 }
