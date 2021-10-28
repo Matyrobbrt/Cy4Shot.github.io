@@ -41,6 +41,9 @@ function loadSidebar(document, currentPage) {
             <li class="chapter-item expanded "><a href="mcmeta-animations.html" id="mcmeta-animations-chapter"><strong
                         aria-hidden="true">8.</strong>
                     MCMeta Animations</a></li>
+            <li class="chapter-item expanded "><a href="effects.html" id="effects-chapter"><strong
+                    aria-hidden="true">9.</strong>
+                Effects</a></li>
         </ol>
     </div>
 
